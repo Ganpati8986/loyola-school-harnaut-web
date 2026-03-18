@@ -12,8 +12,8 @@ import g3 from '../assets/img3.jpeg';
 import g4 from '../assets/img2.jpeg';
 import g5 from '../assets/img11.jpeg';
 import g6 from '../assets/img1.jpeg';
-import g7 from '../assets/IMG_2323.JPG.jpeg';
-import g8 from '../assets/IMG_2361.JPG.jpeg';
+import g7 from '../assets/IMG_2323.jpeg';
+import g8 from '../assets/IMG_2361.jpeg';
 import lab from '../assets/lab_v.mp4';
 import campus from '../assets/campus.mp4';
 

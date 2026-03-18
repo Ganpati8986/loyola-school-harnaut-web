@@ -165,10 +165,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Users } from "lucide-react";
 
-import fac1 from "../assets/IMG_2309.JPG.jpeg";
-import fac2 from "../assets/IMG_2323.JPG.jpeg";
-import fac3 from "../assets/IMG_2361.JPG.jpeg";
-import fac4 from "../assets/IMG_2365.JPG.jpeg";
+import fac1 from "../assets/IMG_2309.jpeg";
+import fac2 from "../assets/IMG_2323.jpeg";
+import fac3 from "../assets/IMG_2361.jpeg";
+import fac4 from "../assets/IMG_2365.jpeg";
 
 import ProtectedImage from "./ProtectedImage";
 
