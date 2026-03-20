@@ -380,30 +380,322 @@
 
 
 
+// import React, { useState } from 'react';
+// import { Bell, Calendar, ChevronRight, X } from 'lucide-react';
+// import { motion, AnimatePresence } from 'framer-motion';
+// import { useNavigate } from 'react-router-dom';
+// import notice from '../assets/closed.jpg';
+// import notice2 from '../assets/notice2.jpg';
+
+// const notices = [
+//   {
+//     id: 1,
+//     date: 'Mar 17 to Mar 20, 2026',
+//     title: 'Term Break: School closed for Classes I–VIII from 17–20 March.',
+//     isNew: true,
+//     isImportant: true,
+//     fileType: 'image',
+//     fileUrl: notice
+//   },
+//   {
+//     id: 2,
+//     date: 'Mar 21, 2026',
+//     title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
+//     isNew: true,
+//     isImportant: true,
+//     fileType: 'image',
+//     fileUrl: notice
+//   },
+//   {
+//     id: 3,
+//     date: '2026-03-20',
+//     title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
+//     isNew: true,
+//     isImportant: true,
+//     fileType: 'image',
+//     fileUrl: notice2
+//   },
+//   {
+//     id: 4,
+//     date: '2026-03-20',
+//     title: 'Parents are requested to clear all pending/due fees before attending PTM',
+//     isNew: true,
+//     isImportant: true,
+//     fileType: 'image',
+//     fileUrl: notice2
+//   },
+//   {
+//     id: 5,
+//     date: '2026-03-22',
+//     title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
+//     isNew: true,
+//     isImportant: false,
+//     fileType: 'image',
+//     fileUrl: notice2
+//   },
+//   {
+//     id: 6,
+//     date: '2026-03-20',
+//     title: 'Book list for upcoming session is shared along with this notice',
+//     isNew: true,
+//     isImportant: false,
+//     fileType: 'image',
+//     fileUrl: notice2
+//   }
+// ];
+
+// const NoticeBoard = () => {
+//   const navigate = useNavigate();
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const [selectedNotice, setSelectedNotice] = useState(null);
+
+//   return (
+//     <>
+//       <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 h-full flex flex-col">
+
+//         {/* Header */}
+//         <div className="bg-[#003366] text-white p-6 flex items-center justify-between">
+//           <div className="flex items-center space-x-3">
+//             <Bell className="text-[#FFD700] w-6 h-6" />
+//             <h2 className="text-xl font-bold uppercase tracking-wider font-serif">
+//               Notice Board
+//             </h2>
+//           </div>
+
+//           {notices.length > 0 && (
+//             <button
+//               onClick={() => navigate('/bulletin-board')}
+//               className="text-xs font-bold text-[#FFD700] hover:underline flex items-center tracking-wider"
+//             >
+//               VIEW ALL <ChevronRight size={16} className="ml-1" />
+//             </button>
+//           )}
+//         </div>
+
+//         {/* Notice List */}
+//         <div className="p-6 flex-1 overflow-y-auto">
+//           {notices.length === 0 ? (
+//             <div className="text-center py-10">No Notices</div>
+//           ) : (
+//             <div className="space-y-6">
+//               {notices.slice(0, 5).map((notice, index) => (
+//                 <motion.div
+//                   key={notice.id}
+//                   initial={{ x: -20, opacity: 0 }}
+//                   whileInView={{ x: 0, opacity: 1 }}
+//                   transition={{ delay: index * 0.1 }}
+//                   className="flex items-start space-x-4 group cursor-pointer"
+//                   onClick={() => {
+//                     setSelectedNotice(notice);
+//                     setIsModalOpen(true);
+//                   }}
+//                 >
+//                   <div className="bg-gray-50 p-3 rounded-xl text-[#003366] group-hover:bg-[#003366] group-hover:text-white">
+//                     <Calendar size={24} />
+//                   </div>
+
+//                   <div className="flex-1">
+//                     {/* <div className="flex justify-between">
+//                       <span className="text-sm text-gray-400">
+//                         {notice.date}
+//                       </span>
+
+//                       {notice.isNew && (
+//                         <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+//                           NEW
+//                         </span>
+//                       )}
+//                     </div> */}
+
+//                     <div className="flex gap-2">
+//                       {notice.isNew && (
+//                         <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+//                           NEW
+//                         </span>
+//                       )}
+
+//                       {notice.isImportant && (
+//                         <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+//                           IMPORTANT
+//                         </span>
+//                       )}
+//                     </div>
+
+//                     <h3 className="font-bold text-gray-800">
+//                       {notice.title}
+//                     </h3>
+
+//                     {notice.fileType === 'image' && (
+//                       <span className="text-green-500 text-xs">Image</span>
+//                     )}
+//                     {notice.fileType === 'pdf' && (
+//                       <span className="text-red-500 text-xs">PDF</span>
+//                     )}
+//                   </div>
+//                 </motion.div>
+//               ))}
+//             </div>
+//           )}
+//         </div>
+
+//         {/* Footer */}
+//         <div className="p-4 text-center text-sm text-gray-500 border-t">
+//           * Check regularly for updates
+//         </div>
+//       </div>
+
+//       {/* Modal */}
+//       <AnimatePresence>
+//         {isModalOpen && selectedNotice && (
+//           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+
+//             {/* Overlay */}
+//             <motion.div
+//               className="absolute inset-0 bg-black/60"
+//               onClick={() => setIsModalOpen(false)}
+//               initial={{ opacity: 0 }}
+//               animate={{ opacity: 1 }}
+//               exit={{ opacity: 0 }}
+//             />
+
+//             {/* Modal Box */}
+//             <motion.div
+//               className="relative bg-white w-full max-w-3xl rounded-2xl overflow-hidden max-h-[90vh] flex flex-col"
+//               initial={{ scale: 0.9 }}
+//               animate={{ scale: 1 }}
+//               exit={{ scale: 0.9 }}
+//             >
+//               {/* Header */}
+//               <div className="bg-[#003366] text-white p-6 flex justify-between items-center">
+//                 <h2 className="text-lg font-bold">
+//                   {selectedNotice.title}
+//                 </h2>
+//                 <X
+//                   className="cursor-pointer"
+//                   onClick={() => setIsModalOpen(false)}
+//                 />
+//               </div>
+
+//               {/* Body */}
+//               <div className="p-6 space-y-4 overflow-y-auto">
+
+//                 <p className="text-gray-500">{selectedNotice.date}</p>
+
+//                 {/* IMAGE FIXED SIZE */}
+//                 {selectedNotice.fileType === 'image' && (
+//                   <div className="w-full h-[400px] flex items-center justify-center bg-gray-100 rounded-xl">
+//                     <img
+//                       src={selectedNotice.fileUrl}
+//                       alt="notice"
+//                       className="max-h-full max-w-full object-contain rounded-lg cursor-zoom-in"
+//                       onClick={() => window.open(selectedNotice.fileUrl)}
+//                     />
+//                   </div>
+//                 )}
+
+//                 {/* PDF */}
+//                 {selectedNotice.fileType === 'pdf' && (
+//                   <iframe
+//                     src={selectedNotice.fileUrl}
+//                     title="PDF"
+//                     className="w-full h-[400px] rounded-lg border"
+//                   />
+//                 )}
+
+//                 {/* DOWNLOAD */}
+//                 {selectedNotice.fileUrl && (
+//                   <a
+//                     href={selectedNotice.fileUrl}
+//                     download
+//                     className="inline-block bg-[#003366] text-white px-4 py-2 rounded hover:bg-[#002244]"
+//                   >
+//                     Download File
+//                   </a>
+//                 )}
+//               </div>
+//             </motion.div>
+//           </div>
+//         )}
+//       </AnimatePresence>
+//     </>
+//   );
+// };
+
+// export default NoticeBoard;
+
+
+
 import React, { useState } from 'react';
-import { Bell, Calendar, ChevronRight, X } from 'lucide-react';
+import { Bell, Calendar, ChevronRight, X, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import notice from '../assets/closed.jpg';
+import notice2 from '../assets/notice2.jpg';
+import pdf from '../assets/bookList.pdf';
+
+// Example PDF import — replace with your actual PDF assets
+// import noticePdf from '../assets/notice.pdf';
 
 const notices = [
   {
     id: 1,
     date: 'Mar 17 to Mar 20, 2026',
-    title: 'Term Break: School closed for Classes I–VIII from 17–20 March.',
+    title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
     isNew: true,
     isImportant: true,
+    isReminder: false,
     fileType: 'image',
     fileUrl: notice
   },
   {
-    id: 1,
+    id: 2,
     date: 'Mar 21, 2026',
     title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
     isNew: true,
     isImportant: true,
+    isReminder: false,   // ← has both IMPORTANT + REMINDER
     fileType: 'image',
     fileUrl: notice
+  },
+  {
+    id: 3,
+    date: '2026-03-20',
+    title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
+    isNew: true,
+    isImportant: false,
+    isReminder: true,
+    fileType: 'image',                    // ← PDF notice
+    fileUrl: notice2      // replace with your actual PDF path / import
+  },
+  {
+    id: 4,
+    date: '2026-03-20',
+    title: 'Parents are requested to clear all pending/due fees before attending PTM',
+    isNew: true,
+    isImportant: true,
+    isReminder: false,
+    fileType: 'image',                    // ← PDF notice
+    fileUrl: notice2  // replace with your actual PDF path / import
+  },
+  {
+    id: 5,
+    date: '2026-03-22',
+    title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
+    isNew: true,
+    isImportant: false,
+    isReminder: true,   // ← only REMINDER
+    fileType: 'image',
+    fileUrl: notice2
+  },
+  {
+    id: 6,
+    date: '2026-03-20',
+    title: 'Book list for upcoming session is shared along with this notice',
+    isNew: true,
+    isImportant: false,
+    isReminder: false,
+    fileType: 'pdf',                   
+    fileUrl: pdf 
   }
 ];
 
@@ -411,6 +703,16 @@ const NoticeBoard = () => {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedNotice, setSelectedNotice] = useState(null);
+
+  const openModal = (notice) => {
+    setSelectedNotice(notice);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedNotice(null);
+  };
 
   return (
     <>
@@ -436,50 +738,41 @@ const NoticeBoard = () => {
         </div>
 
         {/* Notice List */}
-        <div className="p-6 flex-1 overflow-y-auto">
+        <div className="p-6 overflow-y-auto max-h-[420px]">
           {notices.length === 0 ? (
             <div className="text-center py-10">No Notices</div>
           ) : (
             <div className="space-y-6">
-              {notices.slice(0, 5).map((notice, index) => (
+              {notices.map((notice, index) => (
                 <motion.div
                   key={notice.id}
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start space-x-4 group cursor-pointer"
-                  onClick={() => {
-                    setSelectedNotice(notice);
-                    setIsModalOpen(true);
-                  }}
+                  onClick={() => openModal(notice)}
                 >
-                  <div className="bg-gray-50 p-3 rounded-xl text-[#003366] group-hover:bg-[#003366] group-hover:text-white">
+                  <div className="bg-gray-50 p-3 rounded-xl text-[#003366] group-hover:bg-[#003366] group-hover:text-white transition-colors duration-200">
                     <Calendar size={24} />
                   </div>
 
                   <div className="flex-1">
-                    {/* <div className="flex justify-between">
-                      <span className="text-sm text-gray-400">
-                        {notice.date}
-                      </span>
-
-                      {notice.isNew && (
-                        <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                          NEW
-                        </span>
-                      )}
-                    </div> */}
-
-                    <div className="flex gap-2">
+                    {/* Badges row */}
+                    <div className="flex flex-wrap gap-2 mb-1">
                       {notice.isNew && (
                         <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
                           NEW
                         </span>
                       )}
-
                       {notice.isImportant && (
                         <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
                           IMPORTANT
+                        </span>
+                      )}
+                      {/* ── NEW REMINDER BADGE ── */}
+                      {notice.isReminder && (
+                        <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                          REMINDER
                         </span>
                       )}
                     </div>
@@ -488,11 +781,12 @@ const NoticeBoard = () => {
                       {notice.title}
                     </h3>
 
+                    {/* File type label */}
                     {notice.fileType === 'image' && (
-                      <span className="text-green-500 text-xs">Image</span>
+                      <span className="text-green-500 text-xs font-medium">📷 Image</span>
                     )}
                     {notice.fileType === 'pdf' && (
-                      <span className="text-red-500 text-xs">PDF</span>
+                      <span className="text-red-500 text-xs font-medium">📄 PDF</span>
                     )}
                   </div>
                 </motion.div>
@@ -507,7 +801,7 @@ const NoticeBoard = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* ── MODAL ── */}
       <AnimatePresence>
         {isModalOpen && selectedNotice && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -515,7 +809,7 @@ const NoticeBoard = () => {
             {/* Overlay */}
             <motion.div
               className="absolute inset-0 bg-black/60"
-              onClick={() => setIsModalOpen(false)}
+              onClick={closeModal}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -524,28 +818,42 @@ const NoticeBoard = () => {
             {/* Modal Box */}
             <motion.div
               className="relative bg-white w-full max-w-3xl rounded-2xl overflow-hidden max-h-[90vh] flex flex-col"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
             >
-              {/* Header */}
-              <div className="bg-[#003366] text-white p-6 flex justify-between items-center">
-                <h2 className="text-lg font-bold">
-                  {selectedNotice.title}
-                </h2>
+              {/* Modal Header */}
+              <div className="bg-[#003366] text-white p-6 flex justify-between items-start gap-4">
+                <div className="flex-1">
+                  {/* Badges inside modal header */}
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {selectedNotice.isImportant && (
+                      <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                        IMPORTANT
+                      </span>
+                    )}
+                    {selectedNotice.isReminder && (
+                      <span className="bg-orange-400 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                        REMINDER
+                      </span>
+                    )}
+                  </div>
+                  <h2 className="text-lg font-bold leading-snug">
+                    {selectedNotice.title}
+                  </h2>
+                  <p className="text-sm text-blue-200 mt-1">{selectedNotice.date}</p>
+                </div>
                 <X
-                  className="cursor-pointer"
-                  onClick={() => setIsModalOpen(false)}
+                  className="cursor-pointer flex-shrink-0 mt-1 hover:text-red-300 transition-colors"
+                  onClick={closeModal}
                 />
               </div>
 
-              {/* Body */}
-              <div className="p-6 space-y-4 overflow-y-auto">
+              {/* Modal Body */}
+              <div className="p-6 space-y-4 overflow-y-auto flex-1">
 
-                <p className="text-gray-500">{selectedNotice.date}</p>
-
-                {/* IMAGE FIXED SIZE */}
-                {selectedNotice.fileType === 'image' && (
+                {/* IMAGE viewer */}
+                {selectedNotice.fileType === 'image' && selectedNotice.fileUrl && (
                   <div className="w-full h-[400px] flex items-center justify-center bg-gray-100 rounded-xl">
                     <img
                       src={selectedNotice.fileUrl}
@@ -556,22 +864,25 @@ const NoticeBoard = () => {
                   </div>
                 )}
 
-                {/* PDF */}
-                {selectedNotice.fileType === 'pdf' && (
-                  <iframe
-                    src={selectedNotice.fileUrl}
-                    title="PDF"
-                    className="w-full h-[400px] rounded-lg border"
-                  />
+                {/* PDF viewer — same fixed-height box as image */}
+                {selectedNotice.fileType === 'pdf' && selectedNotice.fileUrl && (
+                  <div className="w-full h-[400px] rounded-xl overflow-hidden border border-gray-200">
+                    <iframe
+                      src={selectedNotice.fileUrl}
+                      title="PDF Notice"
+                      className="w-full h-full"
+                    />
+                  </div>
                 )}
 
-                {/* DOWNLOAD */}
+                {/* Download button for both types */}
                 {selectedNotice.fileUrl && (
                   <a
                     href={selectedNotice.fileUrl}
                     download
-                    className="inline-block bg-[#003366] text-white px-4 py-2 rounded hover:bg-[#002244]"
+                    className="inline-flex items-center gap-2 bg-[#003366] text-white px-4 py-2 rounded-lg hover:bg-[#002244] transition-colors"
                   >
+                    <Download size={16} />
                     Download File
                   </a>
                 )}
