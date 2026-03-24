@@ -350,6 +350,7 @@ import { Bell, Calendar, ChevronRight, Star, X } from 'lucide-react';
 import noticeImg from '../assets/closed.jpg';
 import notice2 from '../assets/notice2.jpg';
 import pdf from '../assets/bookList.pdf';
+import pdf1 from '../assets/new24.pdf';
 
 const BulletinBoard = () => {
 
@@ -416,7 +417,28 @@ const BulletinBoard = () => {
     isReminder: false,
     fileType: 'pdf',                   
     fileUrl: pdf 
+  },
+  {
+    "id": 7,
+    "date": "2026-03-24",
+    "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
+    "isNew": true,
+    "isImportant": true,
+    "isReminder": false,
+    "fileType": "pdf",
+    "fileUrl": pdf1
+  },
+  {
+    "id": 8,
+    "date": "2026-03-24",
+    "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
+    "isNew": true,
+    "isImportant": false,
+    "isReminder": true,
+    "fileType": "pdf",
+    "fileUrl": pdf1
   }
+  
   ];
 
   return (

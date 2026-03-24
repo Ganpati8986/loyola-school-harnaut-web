@@ -878,29 +878,103 @@ const Careers = () => {
       setCvFile(e.target.files[0]);
     }
   };
-
-  const handleSubmit = async (e: React.FormEvent, isGeneral: boolean = false) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+//   const SCRIPT_URL =
+//     "https://script.google.com/macros/s/AKfycbyMzHkm4Sdzi3TOwnCyDc08cjTiNRIGYqoyBvX_QISeW2a-9H19S7bqa3xZs8esyg6AfQ/exec";
+  // const handleSubmit = async (e: React.FormEvent, isGeneral: boolean = false) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+  //   // Simulate API call
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     if (isGeneral) {
+  //       setIsGeneralSubmitted(true);
+  //     } else {
+  //       setIsSubmitted(true);
+  //     }
+  //     setFormData({
+  //       name: '',
+  //       email: '',
+  //       phone: '',
+  //       position: '',
+  //       experience: '',
+  //       message: ''
+  //     });
+  //     setCvFile(null);
+  //   }, 2000);
+  // };
+
+
+    const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyMzHkm4Sdzi3TOwnCyDc08cjTiNRIGYqoyBvX_QISeW2a-9H19S7bqa3xZs8esyg6AfQ/exec";
+
+  const handleSubmit = async (
+    e: React.FormEvent,
+    isGeneral: boolean = false,
+  ) => {
+    e.preventDefault();
+
+    try {
+      setIsSubmitting(true);
+
+      let fileBase64 = "";
+      let fileName = "";
+
+      if (cvFile) {
+        fileName = cvFile.name;
+
+        const reader = new FileReader();
+
+        const base64 = await new Promise<string>((resolve) => {
+          reader.onload = () => {
+            const result = reader.result as string;
+            resolve(result.split(",")[1]);
+          };
+
+          reader.readAsDataURL(cvFile);
+        });
+
+        fileBase64 = base64;
+      }
+
+      const form = new FormData();
+
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("phone", formData.phone);
+      form.append("position", formData.position);
+      form.append("experience", formData.experience);
+      form.append("message", formData.message);
+      form.append("formType", isGeneral ? "general" : "job");
+      form.append("fileData", fileBase64);
+      form.append("fileName", fileName);
+
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        body: form,
+      });
+
       if (isGeneral) {
         setIsGeneralSubmitted(true);
       } else {
         setIsSubmitted(true);
       }
+
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        position: '',
-        experience: '',
-        message: ''
+        name: "",
+        email: "",
+        phone: "",
+        position: "",
+        experience: "",
+        message: "",
       });
+
       setCvFile(null);
-    }, 2000);
+    } catch (error) {
+      console.error("Application submit error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToGeneralForm = () => {
@@ -1103,7 +1177,7 @@ const Careers = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-[#002147] focus:bg-white transition-all"
-                          placeholder="John Smith"
+                          placeholder="Name"
                         />
                       </div>
                       <div className="space-y-2">
@@ -1115,7 +1189,7 @@ const Careers = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-[#002147] focus:bg-white transition-all"
-                          placeholder="john@example.com"
+                          placeholder="example@gmail.com"
                         />
                       </div>
                     </div>
