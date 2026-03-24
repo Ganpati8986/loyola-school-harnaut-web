@@ -401,7 +401,7 @@ const BulletinBoard = () => {
 
   {
     "id": 7,
-    "date": "2026-03-24",
+    "date": "24-03-2026",
     "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
     "isNew": true,
     "isImportant": true,
@@ -411,7 +411,7 @@ const BulletinBoard = () => {
   },
   {
     "id": 8,
-    "date": "2026-03-24",
+    "date": "24-03-2026",
     "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
     "isNew": true,
     "isImportant": false,
@@ -421,7 +421,7 @@ const BulletinBoard = () => {
   },
   {
     id: 5,
-    date: '2026-03-22',
+    "date": "22-03-2026",
     title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
     isNew: true,
     isImportant: false,
@@ -431,7 +431,7 @@ const BulletinBoard = () => {
   },
   {
     id: 6,
-    date: '2026-03-20',
+    "date": "20-03-2026",
     title: 'Book list for upcoming session is shared along with this notice',
     isNew: true,
     isImportant: false,
