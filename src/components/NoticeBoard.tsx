@@ -637,46 +637,46 @@ import pdf from '../assets/bookList.pdf';
 // import noticePdf from '../assets/notice.pdf';
 
 const notices = [
-  {
-    id: 1,
-    date: 'Mar 17 to Mar 20, 2026',
-    title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'image',
-    fileUrl: notice
-  },
-  {
-    id: 2,
-    date: 'Mar 21, 2026',
-    title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,   // ← has both IMPORTANT + REMINDER
-    fileType: 'image',
-    fileUrl: notice
-  },
-  {
-    id: 3,
-    date: '2026-03-20',
-    title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
-    isNew: true,
-    isImportant: false,
-    isReminder: true,
-    fileType: 'image',                    // ← PDF notice
-    fileUrl: notice2      // replace with your actual PDF path / import
-  },
-  {
-    id: 4,
-    date: '2026-03-20',
-    title: 'Parents are requested to clear all pending/due fees before attending PTM',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'image',                    // ← PDF notice
-    fileUrl: notice2  // replace with your actual PDF path / import
-  },
+  // {
+  //   id: 1,
+  //   date: 'Mar 17 to Mar 20, 2026',
+  //   title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'image',
+  //   fileUrl: notice
+  // },
+  // {
+  //   id: 2,
+  //   date: 'Mar 21, 2026',
+  //   title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,   // ← has both IMPORTANT + REMINDER
+  //   fileType: 'image',
+  //   fileUrl: notice
+  // },
+  // {
+  //   id: 3,
+  //   date: '2026-03-20',
+  //   title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
+  //   isNew: true,
+  //   isImportant: false,
+  //   isReminder: true,
+  //   fileType: 'image',                    // ← PDF notice
+  //   fileUrl: notice2      // replace with your actual PDF path / import
+  // },
+  // {
+  //   id: 4,
+  //   date: '2026-03-20',
+  //   title: 'Parents are requested to clear all pending/due fees before attending PTM',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'image',                    // ← PDF notice
+  //   fileUrl: notice2  // replace with your actual PDF path / import
+  // },
   {
     id: 5,
     date: '2026-03-22',
@@ -738,7 +738,7 @@ const NoticeBoard = () => {
         </div>
 
         {/* Notice List */}
-        <div className="p-6 overflow-y-auto max-h-[420px]">
+        <div className="p-6 overflow-y-auto flex-1">
           {notices.length === 0 ? (
             <div className="text-center py-10">No Notices</div>
           ) : (
@@ -796,9 +796,11 @@ const NoticeBoard = () => {
         </div>
 
         {/* Footer */}
-        <div className="p-4 text-center text-sm text-gray-500 border-t">
-          * Check regularly for updates
-        </div>
+       <div className="p-4 text-center text-sm border-t">
+  <p className="text-[#003366] font-medium animate-pulse">
+    * Check regularly for updates
+  </p>
+</div>
       </div>
 
       {/* ── MODAL ── */}

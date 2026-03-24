@@ -357,46 +357,46 @@ const BulletinBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const notices = [
-  {
-    id: 1,
-    date: 'Mar 17 to Mar 20, 2026',
-    title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'image',
-    fileUrl: noticeImg
-  },
-  {
-    id: 2,
-    date: 'Mar 21, 2026',
-    title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,   // ← has both IMPORTANT + REMINDER
-    fileType: 'image',
-    fileUrl: noticeImg
-  },
-  {
-    id: 3,
-    date: '2026-03-20',
-    title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
-    isNew: true,
-    isImportant: false,
-    isReminder: true,
-    fileType: 'image',                    // ← PDF notice
-    fileUrl: notice2      // replace with your actual PDF path / import
-  },
-  {
-    id: 4,
-    date: '2026-03-20',
-    title: 'Parents are requested to clear all pending/due fees before attending PTM',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'image',                    // ← PDF notice
-    fileUrl: notice2  // replace with your actual PDF path / import
-  },
+  // {
+  //   id: 1,
+  //   date: 'Mar 17 to Mar 20, 2026',
+  //   title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
+  //   isNew: false,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'image',
+  //   fileUrl: noticeImg
+  // },
+  // {
+  //   id: 2,
+  //   date: 'Mar 21, 2026',
+  //   title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
+  //   isNew: false,
+  //   isImportant: true,
+  //   isReminder: false,   // ← has both IMPORTANT + REMINDER
+  //   fileType: 'image',
+  //   fileUrl: noticeImg
+  // },
+  // {
+  //   id: 3,
+  //   date: '2026-03-20',
+  //   title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
+  //   isNew: false,
+  //   isImportant: false,
+  //   isReminder: true,
+  //   fileType: 'image',                    // ← PDF notice
+  //   fileUrl: notice2      // replace with your actual PDF path / import
+  // },
+  // {
+  //   id: 4,
+  //   date: '2026-03-20',
+  //   title: 'Parents are requested to clear all pending/due fees before attending PTM',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'image',                    // ← PDF notice
+  //   fileUrl: notice2  // replace with your actual PDF path / import
+  // },
   {
     id: 5,
     date: '2026-03-22',
@@ -514,13 +514,13 @@ const BulletinBoard = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-[#FFD700] mt-1">•</span>
-                  Term Break: School closed for Classes I–VIII from 17–20 March
+                  Book list for upcoming session is shared along with this notice
                 </li>
-
+{/* 
                 <li className="flex items-start gap-2">
                   <span className="text-[#FFD700] mt-1">•</span>
                   PTM on 21st March, 8:00–11:00 AM.
-                </li>
+                </li> */}
               </ul>
             </div>
 

@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-6 flex flex-col items-center text-center md:items-start md:text-left">
             <div className="flex items-center space-x-3">
 
-{/* 
+              {/* 
 <div className="w-16 h-16 rounded-full border-2 border-[#FFD700] overflow-hidden flex items-center justify-center">
   <img
     src={ft_logo}
@@ -22,13 +22,13 @@ const Footer = () => {
 </div> */}
 
 
-<div className="w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
-  <img
-    src={ft_logo}
-    alt="Loyola School Logo"
-    className="w-full h-full object-contain"
-  />
-</div>
+              <div className="w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
+                <img
+                  src={ft_logo}
+                  alt="Loyola School Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
 
 
@@ -74,9 +74,9 @@ const Footer = () => {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <MapPin className="text-[#FFD700] shrink-0" size={20} aria-hidden="true" />
-                <address className="text-gray-400 text-sm not-italic">
-                  NH-33, RANCHI ROAD, HARNAUT,<br />
-                  NALANDA, BIHAR - 803110
+                             <address className="text-gray-400 text-sm not-italic">
+                  NH-33, Ranchi Road, Harnaut,<br />
+                  Nalanda, Bihar - 803110
                 </address>
               </li>
               <li className="flex items-center space-x-4">
@@ -88,7 +88,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-4">
                 <Mail className="text-[#FFD700] shrink-0" size={20} aria-hidden="true" />
-                <a href="mailto:LOYOLASCHOOLHARNAUT@GMAIL.COM" className="text-gray-400 text-sm hover:text-[#FFD700] transition-colors">LOYOLASCHOOLHARNAUT@GMAIL.COM</a>
+                <a href="mailto:LOYOLASCHOOLHARNAUT@GMAIL.COM" className="text-gray-400 text-sm hover:text-[#FFD700] transition-colors">Loyolaschoolharnaut@gmail.com</a>
               </li>
             </ul>
           </div>
