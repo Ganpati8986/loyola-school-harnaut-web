@@ -398,6 +398,27 @@ const BulletinBoard = () => {
   //   fileType: 'image',                    // ← PDF notice
   //   fileUrl: notice2  // replace with your actual PDF path / import
   // },
+
+  {
+    "id": 7,
+    "date": "2026-03-24",
+    "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
+    "isNew": true,
+    "isImportant": true,
+    "isReminder": false,
+    "fileType": "pdf",
+    "fileUrl": pdf1
+  },
+  {
+    "id": 8,
+    "date": "2026-03-24",
+    "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
+    "isNew": true,
+    "isImportant": false,
+    "isReminder": true,
+    "fileType": "pdf",
+    "fileUrl": pdf1
+  },
   {
     id: 5,
     date: '2026-03-22',
@@ -418,26 +439,7 @@ const BulletinBoard = () => {
     fileType: 'pdf',                   
     fileUrl: pdf 
   },
-  {
-    "id": 7,
-    "date": "2026-03-24",
-    "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
-    "isNew": true,
-    "isImportant": true,
-    "isReminder": false,
-    "fileType": "pdf",
-    "fileUrl": pdf1
-  },
-  {
-    "id": 8,
-    "date": "2026-03-24",
-    "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
-    "isNew": true,
-    "isImportant": false,
-    "isReminder": true,
-    "fileType": "pdf",
-    "fileUrl": pdf1
-  }
+  
   
   ];
 
@@ -536,13 +538,13 @@ const BulletinBoard = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-[#FFD700] mt-1">•</span>
-                  Book list for upcoming session is shared along with this notice
+                  Commencement of New Academic Session (Class II to X) from 25th March 2026
                 </li>
-{/* 
+{
                 <li className="flex items-start gap-2">
                   <span className="text-[#FFD700] mt-1">•</span>
-                  PTM on 21st March, 8:00–11:00 AM.
-                </li> */}
+                  New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM
+                </li> }
               </ul>
             </div>
 

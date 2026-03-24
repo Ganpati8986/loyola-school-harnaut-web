@@ -678,6 +678,27 @@ const notices = [
   //   fileType: 'image',                    // ← PDF notice
   //   fileUrl: notice2  // replace with your actual PDF path / import
   // },
+
+    {
+      "id": 7,
+      "date": "2026-03-24",
+      "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
+      "isNew": true,
+      "isImportant": true,
+      "isReminder": false,
+      "fileType": "pdf",
+      "fileUrl": pdf1
+    },
+    {
+      "id": 8,
+      "date": "2026-03-24",
+      "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
+      "isNew": true,
+      "isImportant": false,
+      "isReminder": true,
+      "fileType": "pdf",
+      "fileUrl": pdf1
+    },
   {
     id: 5,
     date: '2026-03-22',
@@ -698,26 +719,7 @@ const notices = [
     fileType: 'pdf',                   
     fileUrl: pdf 
   },
-  {
-      "id": 7,
-      "date": "2026-03-24",
-      "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
-      "isNew": true,
-      "isImportant": true,
-      "isReminder": false,
-      "fileType": "pdf",
-      "fileUrl": pdf1
-    },
-    {
-      "id": 8,
-      "date": "2026-03-24",
-      "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
-      "isNew": true,
-      "isImportant": false,
-      "isReminder": true,
-      "fileType": "pdf",
-      "fileUrl": pdf1
-    }
+
 ];
 
 const NoticeBoard = () => {
