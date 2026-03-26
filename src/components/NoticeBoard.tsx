@@ -633,6 +633,7 @@ import notice from '../assets/closed.jpg';
 import notice2 from '../assets/notice2.jpg';
 import pdf from '../assets/bookList.pdf';
 import pdf1 from '../assets/new24.pdf';
+import pdfRamNavami from '../assets/ram.pdf'
 
 // Example PDF import — replace with your actual PDF assets
 // import noticePdf from '../assets/notice.pdf';
@@ -678,6 +679,17 @@ const notices = [
   //   fileType: 'image',                    // ← PDF notice
   //   fileUrl: notice2  // replace with your actual PDF path / import
   // },
+
+  {
+  "id": 9,
+  "date": "26-03-2026",
+  "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
+  "isNew": true,
+  "isImportant": true,
+  "isReminder": false,
+  "fileType": "pdf",
+  "fileUrl": pdfRamNavami
+},
 
     {
       "id": 7,
