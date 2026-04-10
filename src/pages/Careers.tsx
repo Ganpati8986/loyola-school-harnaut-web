@@ -906,7 +906,7 @@ const Careers = () => {
 
 
     const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyMzHkm4Sdzi3TOwnCyDc08cjTiNRIGYqoyBvX_QISeW2a-9H19S7bqa3xZs8esyg6AfQ/exec";
+    "https://script.google.com/macros/s/AKfycbwZfD-A3hH3doYnDuZ98VdYZag5rRlUhCORUW-Ayf9lbXuICpx5uzF2j0WQye16lzqj/exec";
 
   const handleSubmit = async (
     e: React.FormEvent,

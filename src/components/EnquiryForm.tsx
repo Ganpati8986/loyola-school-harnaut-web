@@ -7,7 +7,7 @@ interface EnquiryFormProps {
 }
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzvsOoPak8B1fLSDyKy7hvoPmcaPryifTN8u9hUR0q65jNvlPFKEeBTn7g9kVQOAxygUw/exec";
+  "https://script.google.com/macros/s/AKfycbyS6l_C_ItItybG-CjeYl7EvKYUlFLwUsO5cBb1WHBUdfQABRozmWsZP8QVJhAvNd7T/exec";
 
 const EnquiryForm: React.FC<EnquiryFormProps> = ({
   onSubmit,
