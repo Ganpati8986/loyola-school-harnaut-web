@@ -618,6 +618,9 @@ import mam15 from '../assets/Sitara Kumari.jpeg';
 import mam16 from '../assets/sister deepa.jpeg';
 import sir19 from '../assets/prince2.jpeg';
 import sir20 from '../assets/Ranjit Pradhan.jpeg';
+import mam17 from '../assets/sabina.jpeg';
+import mam18 from '../assets/aruna.jpeg';
+import mam19 from '../assets/naina.jpeg';
 
 const teachers = [
   // Female Teachers
@@ -626,6 +629,9 @@ const teachers = [
   { id: "3254486", name: "SEEMA KUMARI", designation: "Office Staff", email: "SEEMAK8641@GMAIL.COM", image: mam, department: "Non Teaching", experience: 5 },
   { id: "2244167", name: "KRITIKA RAI", designation: "Assistant Teacher", email: "kritikarai223@gmail.com", image: mam1, department: "Teacher", experience: 5 },
   { id: "2246964", name: "SARA KISKU", designation: "Assistant Teacher", email: "saku2507@gmail.com", image: mam2, department: "Teacher", experience: 5 },
+    { id: "", name: "SILBINA BARLA", designation: "Assistant Teacher", email: "", image: mam17, department: "Non Teaching", experience: 5 },
+  { id: "", name: "ARUNA MARY", designation: "Assistant Teacher", email: "", image: mam18, department: "Teacher", experience: 5 },
+  { id: "", name: "NAINA KUMARI", designation: "Office Staff", email: "", image: mam19, department: "Teacher", experience: 5 },
   { id: "73754", name: "ANJU SANGEETA TOPPO", designation: "Assistant Teacher", email: " anju221984@gmail.com", image: mam3, department: "Teacher", experience: 5 },
   { id: "73877", name: "ELINA MURMU", designation: "Assistant Teacher", email: "elinamurmu2015@gmail.com", image: mam4, department: "Teacher", experience: 5 },
   { id: "2988307", name: "SONALI SINHA", designation: "Assistant Teacher", email: " 26SONALISINHA@GMAIL.COM", image: mam5, department: "Teacher", experience: 5 },

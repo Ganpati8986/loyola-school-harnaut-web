@@ -399,57 +399,57 @@ const BulletinBoard = () => {
   //   fileType: 'image',                    // ← PDF notice
   //   fileUrl: notice2  // replace with your actual PDF path / import
   // },
-    {
-    "id": 9,
-    "date": "26-03-2026",
-    "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
-    "isNew": true,
-    "isImportant": true,
-    "isReminder": false,
-    "fileType": "pdf",
-    "fileUrl": pdfRamNavami
-  },
+  //   {
+  //   "id": 9,
+  //   "date": "26-03-2026",
+  //   "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
+  //   "isNew": true,
+  //   "isImportant": true,
+  //   "isReminder": false,
+  //   "fileType": "pdf",
+  //   "fileUrl": pdfRamNavami
+  // },
 
-  {
-    "id": 7,
-    "date": "24-03-2026",
-    "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
-    "isNew": true,
-    "isImportant": true,
-    "isReminder": false,
-    "fileType": "pdf",
-    "fileUrl": pdf1
-  },
-  {
-    "id": 8,
-    "date": "24-03-2026",
-    "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
-    "isNew": true,
-    "isImportant": false,
-    "isReminder": true,
-    "fileType": "pdf",
-    "fileUrl": pdf1
-  },
-  {
-    id: 5,
-    "date": "22-03-2026",
-    title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
-    isNew: true,
-    isImportant: false,
-    isReminder: true,   // ← only REMINDER
-    fileType: 'image',
-    fileUrl: notice2
-  },
-  {
-    id: 6,
-    "date": "20-03-2026",
-    title: 'Book list for upcoming session is shared along with this notice',
-    isNew: true,
-    isImportant: false,
-    isReminder: false,
-    fileType: 'pdf',                   
-    fileUrl: pdf 
-  },
+  // {
+  //   "id": 7,
+  //   "date": "24-03-2026",
+  //   "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
+  //   "isNew": true,
+  //   "isImportant": true,
+  //   "isReminder": false,
+  //   "fileType": "pdf",
+  //   "fileUrl": pdf1
+  // },
+  // {
+  //   "id": 8,
+  //   "date": "24-03-2026",
+  //   "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
+  //   "isNew": true,
+  //   "isImportant": false,
+  //   "isReminder": true,
+  //   "fileType": "pdf",
+  //   "fileUrl": pdf1
+  // },
+  // {
+  //   id: 5,
+  //   "date": "22-03-2026",
+  //   title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
+  //   isNew: true,
+  //   isImportant: false,
+  //   isReminder: true,   // ← only REMINDER
+  //   fileType: 'image',
+  //   fileUrl: notice2
+  // },
+  // {
+  //   id: 6,
+  //   "date": "20-03-2026",
+  //   title: 'Book list for upcoming session is shared along with this notice',
+  //   isNew: true,
+  //   isImportant: false,
+  //   isReminder: false,
+  //   fileType: 'pdf',                   
+  //   fileUrl: pdf 
+  // },
   
   
   ];
@@ -546,7 +546,7 @@ const BulletinBoard = () => {
 
             <div className="bg-[#003366] text-white p-6 rounded-3xl">
               <h3 className="text-xl font-bold mb-4">Emergency Alerts</h3>
-              <ul className="space-y-3 text-sm">
+              {/* <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-[#FFD700] mt-1">•</span>
                   Commencement of New Academic Session (Class II to X) from 25th March 2026
@@ -556,7 +556,7 @@ const BulletinBoard = () => {
                   <span className="text-[#FFD700] mt-1">•</span>
                   New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM
                 </li> }
-              </ul>
+              </ul> */}
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-xl">
