@@ -28,7 +28,7 @@
 //             <Bell className="text-[#FFD700] w-6 h-6" />
 //             <h2 className="text-xl font-bold uppercase tracking-wider font-serif">Notice Board</h2>
 //           </div>
-//           <button 
+//           <button
 //             onClick={() => navigate('/bulletin-board')}
 //             className="text-xs font-bold text-[#FFD700] hover:underline flex items-center tracking-wider"
 //           >
@@ -78,7 +78,7 @@
 //       <AnimatePresence>
 //         {isModalOpen && (
 //           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-//             <motion.div 
+//             <motion.div
 //               initial={{ opacity: 0 }}
 //               animate={{ opacity: 1 }}
 //               exit={{ opacity: 0 }}
@@ -101,7 +101,7 @@
 //                     <p className="text-blue-200 text-sm mt-1">Stay updated with the latest announcements</p>
 //                   </div>
 //                 </div>
-//                 <button 
+//                 <button
 //                   onClick={() => setIsModalOpen(false)}
 //                   className="p-2 hover:bg-white/10 rounded-full transition-colors"
 //                 >
@@ -148,9 +148,6 @@
 // };
 
 // export default NoticeBoard;
-
-
-
 
 // import React, { useState } from 'react';
 // import { Bell, Calendar, ChevronRight, X } from 'lucide-react';
@@ -265,7 +262,6 @@
 
 //       </div>
 
-
 //       {/* Modal */}
 //       <AnimatePresence>
 //         {isModalOpen && (
@@ -323,7 +319,7 @@
 //                     </h3>
 
 //                     <p className="text-gray-500 max-w-md">
-//                       There are currently no notices published. 
+//                       There are currently no notices published.
 //                       Please check again later.
 //                     </p>
 //                   </div>
@@ -377,8 +373,6 @@
 // };
 
 // export default NoticeBoard;
-
-
 
 // import React, { useState } from 'react';
 // import { Bell, Calendar, ChevronRight, X } from 'lucide-react';
@@ -623,17 +617,15 @@
 
 // export default NoticeBoard;
 
-
-
-import React, { useState } from 'react';
-import { Bell, Calendar, ChevronRight, X, Download } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import notice from '../assets/closed.jpg';
-import notice2 from '../assets/notice2.jpg';
-import pdf from '../assets/bookList.pdf';
-import pdf1 from '../assets/new24.pdf';
-import pdfRamNavami from '../assets/ram.pdf'
+import React, { useState } from "react";
+import { Bell, Calendar, ChevronRight, X, Download } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import notice from "../assets/closed.jpg";
+import notice2 from "../assets/notice2.jpg";
+import pdf from "../assets/bookList.pdf";
+import pdf1 from "../assets/new24.pdf";
+import pdfRamNavami from "../assets/ram.pdf";
 
 // Example PDF import — replace with your actual PDF assets
 // import noticePdf from '../assets/notice.pdf';
@@ -679,59 +671,56 @@ const notices = [
   //   fileType: 'image',                    // ← PDF notice
   //   fileUrl: notice2  // replace with your actual PDF path / import
   // },
-
-//   {
-//   "id": 9,
-//   "date": "26-03-2026",
-//   "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
-//   "isNew": true,
-//   "isImportant": true,
-//   "isReminder": false,
-//   "fileType": "pdf",
-//   "fileUrl": pdfRamNavami
-// },
-
-//     {
-//       "id": 7,
-//      "date": "24-03-2026",
-//       "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
-//       "isNew": true,
-//       "isImportant": true,
-//       "isReminder": false,
-//       "fileType": "pdf",
-//       "fileUrl": pdf1
-//     },
-//     {
-//       "id": 8,
-//       "date": "24-03-2026",
-//       "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
-//       "isNew": true,
-//       "isImportant": false,
-//       "isReminder": true,
-//       "fileType": "pdf",
-//       "fileUrl": pdf1
-//     },
-//   {
-//     id: 5,
-//     "date": "22-03-2026",
-//     title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
-//     isNew: true,
-//     isImportant: false,
-//     isReminder: true,   // ← only REMINDER
-//     fileType: 'image',
-//     fileUrl: notice2
-//   },
-//   {
-//     id: 6,
-//    "date": "20-03-2026",
-//     title: 'Book list for upcoming session is shared along with this notice',
-//     isNew: true,
-//     isImportant: false,
-//     isReminder: false,
-//     fileType: 'pdf',                   
-//     fileUrl: pdf 
-//   },
-
+  //   {
+  //   "id": 9,
+  //   "date": "26-03-2026",
+  //   "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
+  //   "isNew": true,
+  //   "isImportant": true,
+  //   "isReminder": false,
+  //   "fileType": "pdf",
+  //   "fileUrl": pdfRamNavami
+  // },
+  //     {
+  //       "id": 7,
+  //      "date": "24-03-2026",
+  //       "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
+  //       "isNew": true,
+  //       "isImportant": true,
+  //       "isReminder": false,
+  //       "fileType": "pdf",
+  //       "fileUrl": pdf1
+  //     },
+  //     {
+  //       "id": 8,
+  //       "date": "24-03-2026",
+  //       "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
+  //       "isNew": true,
+  //       "isImportant": false,
+  //       "isReminder": true,
+  //       "fileType": "pdf",
+  //       "fileUrl": pdf1
+  //     },
+  //   {
+  //     id: 5,
+  //     "date": "22-03-2026",
+  //     title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
+  //     isNew: true,
+  //     isImportant: false,
+  //     isReminder: true,   // ← only REMINDER
+  //     fileType: 'image',
+  //     fileUrl: notice2
+  //   },
+  //   {
+  //     id: 6,
+  //    "date": "20-03-2026",
+  //     title: 'Book list for upcoming session is shared along with this notice',
+  //     isNew: true,
+  //     isImportant: false,
+  //     isReminder: false,
+  //     fileType: 'pdf',
+  //     fileUrl: pdf
+  //   },
 ];
 
 const NoticeBoard = () => {
@@ -752,19 +741,18 @@ const NoticeBoard = () => {
   return (
     <>
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 h-full flex flex-col">
-
         {/* Header */}
         <div className="bg-[#003366] text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Bell className="text-[#FFD700] w-6 h-6" />
-            <h2 className="text-xl font-bold uppercase tracking-wider font-serif">
+            <h2 className=" text-lg sm:text-xl font-bold uppercase tracking-wider font-serif">
               Notice Board
             </h2>
           </div>
 
           {notices.length > 0 && (
             <button
-              onClick={() => navigate('/bulletin-board')}
+              onClick={() => navigate("/bulletin-board")}
               className="text-xs font-bold text-[#FFD700] hover:underline flex items-center tracking-wider"
             >
               VIEW ALL <ChevronRight size={16} className="ml-1" />
@@ -812,16 +800,18 @@ const NoticeBoard = () => {
                       )}
                     </div>
 
-                    <h3 className="font-bold text-gray-800">
-                      {notice.title}
-                    </h3>
+                    <h3 className="font-bold text-gray-800">{notice.title}</h3>
 
                     {/* File type label */}
-                    {notice.fileType === 'image' && (
-                      <span className="text-green-500 text-xs font-medium">📷 Image</span>
+                    {notice.fileType === "image" && (
+                      <span className="text-green-500 text-xs font-medium">
+                        📷 Image
+                      </span>
                     )}
-                    {notice.fileType === 'pdf' && (
-                      <span className="text-red-500 text-xs font-medium">📄 PDF</span>
+                    {notice.fileType === "pdf" && (
+                      <span className="text-red-500 text-xs font-medium">
+                        📄 PDF
+                      </span>
                     )}
                   </div>
                 </motion.div>
@@ -831,18 +821,17 @@ const NoticeBoard = () => {
         </div>
 
         {/* Footer */}
-       <div className="p-4 text-center text-sm border-t">
-  <p className="text-[#003366] font-medium animate-pulse">
-    * Check regularly for updates
-  </p>
-</div>
+        <div className="p-4 text-center text-sm border-t">
+          <p className="text-[#003366] font-medium animate-pulse">
+            * Check regularly for updates
+          </p>
+        </div>
       </div>
 
       {/* ── MODAL ── */}
       <AnimatePresence>
         {isModalOpen && selectedNotice && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-
             {/* Overlay */}
             <motion.div
               className="absolute inset-0 bg-black/60"
@@ -878,7 +867,9 @@ const NoticeBoard = () => {
                   <h2 className="text-lg font-bold leading-snug">
                     {selectedNotice.title}
                   </h2>
-                  <p className="text-sm text-blue-200 mt-1">{selectedNotice.date}</p>
+                  <p className="text-sm text-blue-200 mt-1">
+                    {selectedNotice.date}
+                  </p>
                 </div>
                 <X
                   className="cursor-pointer flex-shrink-0 mt-1 hover:text-red-300 transition-colors"
@@ -888,29 +879,30 @@ const NoticeBoard = () => {
 
               {/* Modal Body */}
               <div className="p-6 space-y-4 overflow-y-auto flex-1">
-
                 {/* IMAGE viewer */}
-                {selectedNotice.fileType === 'image' && selectedNotice.fileUrl && (
-                  <div className="w-full h-[400px] flex items-center justify-center bg-gray-100 rounded-xl">
-                    <img
-                      src={selectedNotice.fileUrl}
-                      alt="notice"
-                      className="max-h-full max-w-full object-contain rounded-lg cursor-zoom-in"
-                      onClick={() => window.open(selectedNotice.fileUrl)}
-                    />
-                  </div>
-                )}
+                {selectedNotice.fileType === "image" &&
+                  selectedNotice.fileUrl && (
+                    <div className="w-full h-[400px] flex items-center justify-center bg-gray-100 rounded-xl">
+                      <img
+                        src={selectedNotice.fileUrl}
+                        alt="notice"
+                        className="max-h-full max-w-full object-contain rounded-lg cursor-zoom-in"
+                        onClick={() => window.open(selectedNotice.fileUrl)}
+                      />
+                    </div>
+                  )}
 
                 {/* PDF viewer — same fixed-height box as image */}
-                {selectedNotice.fileType === 'pdf' && selectedNotice.fileUrl && (
-                  <div className="w-full h-[400px] rounded-xl overflow-hidden border border-gray-200">
-                    <iframe
-                      src={selectedNotice.fileUrl}
-                      title="PDF Notice"
-                      className="w-full h-full"
-                    />
-                  </div>
-                )}
+                {selectedNotice.fileType === "pdf" &&
+                  selectedNotice.fileUrl && (
+                    <div className="w-full h-[400px] rounded-xl overflow-hidden border border-gray-200">
+                      <iframe
+                        src={selectedNotice.fileUrl}
+                        title="PDF Notice"
+                        className="w-full h-full"
+                      />
+                    </div>
+                  )}
 
                 {/* Download button for both types */}
                 {selectedNotice.fileUrl && (

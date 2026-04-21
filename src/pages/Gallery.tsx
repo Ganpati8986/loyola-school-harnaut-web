@@ -12,8 +12,8 @@ import g3 from '../assets/img3.jpeg';
 import g4 from '../assets/img2.jpeg';
 import g5 from '../assets/img11.jpeg';
 import g6 from '../assets/img1.jpeg';
-import g7 from '../assets/IMG_2323.jpeg';
-import g8 from '../assets/IMG_2361.jpeg';
+import g7 from '../assets/play.jpeg';
+import g8 from '../assets/play1.jpeg';
 import lab from '../assets/lab_v.mp4';
 import campus from '../assets/campus.mp4';
 
@@ -42,8 +42,8 @@ const galleryItems = [
     videoUrl: campus,
     title: 'Campus' 
   },
-  { type: 'image', category: 'CAMPUS', src: g7, title: 'School Playground' },
-  { type: 'image', category: 'OTHER', src: g8, title: 'Library Reading Hall' },
+  { type: 'image', category: 'CAMPUS', src: g7, title: 'Playground' },
+  { type: 'image', category: 'OTHER', src: g8, title: ' Playground' },
   // { 
   //   type: 'video', 
   //   category: 'CLASSROOM', 

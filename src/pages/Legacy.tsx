@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Quote, Award, ArrowRight, ArrowUp } from 'lucide-react';
-import l1 from '../assets/princ.jpeg';
+import l1 from '../assets/prince2.jpeg';
 import l2 from '../assets/ly_2.png';
 import l3 from '../assets/ly_3.png';
 import l4 from '../assets/ly4.png';
@@ -28,16 +28,16 @@ export const JUBILEE_MESSAGES = [
     color: "from-blue-900 to-cyan-900",
     accent: "text-cyan-400"
   },
-  {
-    role: "Current Principal",
-    name: "Fr. Asit Lakra",
-    title: "From the Principal's Desk",
-    image: l1,
-    message: "Ever since its inception, Loyola School has become the Temple of Learning, igniting young minds with the fire of truth, love and knowledge. As Nelson Mandela said, 'Education is the most powerful weapon which you can use to change the world.' We enable students for a better tomorrow, molding them for the service to self and society.",
-    date: "Current",
-    color: "from-emerald-900 to-teal-900",
-    accent: "text-emerald-400"
-  },
+{
+  role: "Former Principal",
+  name: "Fr. Asit Lakra",
+  title: "Message from the Former Principal",
+  image: l1,
+  message: "Ever since its inception, Loyola School has become the Temple of Learning, igniting young minds with the fire of truth, love and knowledge. As Nelson Mandela said, 'Education is the most powerful weapon which you can use to change the world.' We enable students for a better tomorrow, molding them for the service to self and society.",
+  date: "",
+  color: "from-emerald-900 to-teal-900",
+  accent: "text-emerald-400"
+},
   {
     role: "First Principal",
     name: "Sr. Annie",

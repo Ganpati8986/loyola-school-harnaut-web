@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Quote } from 'lucide-react';
 import { cn } from '../lib/utils';
-import principal from '../assets/princ.jpeg';
+import principal from '../assets/new_princ (2).jpeg';
 import vice from '../assets/sister deepa.jpeg';
 import ProtectedImage from './ProtectedImage';
 
@@ -12,7 +12,7 @@ const PrincipalMessage = () => {
   const content = {
     principal: {
       title: "Principal's Message",
-      name: " Fr. Asit Lakra",
+      name: " Fr. Anil Kumar Kandru",
       role: "Principal, Loyola School Harnaut",
       image: principal,
       quote: "Welcome to Loyola School, Harnaut. Our mission is to provide an environment where every child can discover their potential and grow into a responsible, compassionate, and capable individual.",

@@ -136,7 +136,7 @@ import React, { useEffect, useState } from "react";
 const ProtectedImage = ({
   src,
   alt,
-  watermark = "Protected",
+  watermark = "",
   className,
   referrerPolicy
 }) => {
