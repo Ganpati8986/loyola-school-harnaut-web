@@ -2,36 +2,40 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Trophy, Music, Palette, Microscope, Users, Star, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import sports from "../assets/sports.jpeg";
+import art from "../assets/art.jpeg";
+import visual from "../assets/visual.jpeg";
+import science from "../assets/visual.jpeg";
 
 const activities = [
   {
     title: "Sports & Athletics",
     icon: <Trophy className="text-[#FFD700]" size={32} />,
     description: "Comprehensive sports program including Football, Cricket, Basketball, and Athletics to foster physical fitness and team spirit.",
-    image: "https://picsum.photos/seed/school-sports/800/600",
+    image: sports,
     features: ["Inter-school tournaments", "Professional coaching", "Annual Sports Day", "Modern sports complex"]
   },
   {
     title: "Performing Arts",
     icon: <Music className="text-[#CC0000]" size={32} />,
     description: "Nurturing creativity through Music, Dance, and Drama. Students explore their artistic potential and perform on various platforms.",
-    image: "https://picsum.photos/seed/school-arts/800/600",
+    image: art,
     features: ["Classical & Modern Dance", "Vocal & Instrumental Music", "Drama Workshops", "Annual Cultural Fest"]
   },
   {
     title: "Visual Arts",
     icon: <Palette className="text-[#003366]" size={32} />,
     description: "Encouraging self-expression through Painting, Sketching, Sculpture, and Craft. Our art studio is a hub of imagination.",
-    image: "https://picsum.photos/seed/school-painting/800/600",
+    image: visual,
     features: ["Art Exhibitions", "Pottery & Sculpture", "Graphic Design basics", "Community art projects"]
   },
-  {
-    title: "Science & Innovation",
-    icon: <Microscope className="text-emerald-600" size={32} />,
-    description: "Promoting scientific temper through hands-on experiments, robotics, and participation in science fairs and olympiads.",
-    image: "https://picsum.photos/seed/school-science/800/600",
-    features: ["Robotics Club", "Science Exhibitions", "Math Olympiads", "Environmental projects"]
-  }
+  // {
+  //   title: "Science & Innovation",
+  //   icon: <Microscope className="text-emerald-600" size={32} />,
+  //   description: "Promoting scientific temper through hands-on experiments, robotics, and participation in science fairs and olympiads.",
+  //   image: science,
+  //   features: ["Robotics Club", "Science Exhibitions", "Math Olympiads", "Environmental projects"]
+  // }
 ];
 
 const Activities = () => {
@@ -72,7 +76,7 @@ const Activities = () => {
             className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
             We believe in holistic development. Our diverse range of activities 
-            ensures every student finds their passion and develops essential life skills.
+            ensures every student finds their passion and develops essential life skills
           </motion.p>
         </div>
       </div>
@@ -123,12 +127,12 @@ const Activities = () => {
                   ))}
                 </div>
 
-                <div className="mt-10">
+                {/* <div className="mt-10">
                   <button className="inline-flex items-center space-x-2 text-[#CC0000] font-bold hover:translate-x-2 transition-transform">
                     <span>Learn more about {activity.title}</span>
                     <ChevronRight size={20} />
                   </button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
@@ -136,7 +140,7 @@ const Activities = () => {
       </div>
 
       {/* Clubs Section */}
-      <div className="bg-gray-50 py-24">
+      {/* <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#003366] mb-4">Student Clubs</h2>
@@ -164,7 +168,7 @@ const Activities = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

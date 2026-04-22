@@ -187,7 +187,7 @@ const AboutSection = () => {
               Loyola School, Harnaut, is a private school established by the
               Catholic Church, Harnaut, which is a unit of Mokameh Parish
               Society, under the Archdiocese of Patna, for the education of boys
-              and girls up to the Senior Secondary level.
+              and girls up to the Senior Secondary level
             </p>
             <ul className="space-y-4 mb-10">
               {[

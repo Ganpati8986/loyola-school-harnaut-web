@@ -6,6 +6,7 @@ import l1 from '../assets/prince2.jpeg';
 import l2 from '../assets/ly_2.png';
 import l3 from '../assets/ly_3.png';
 import l4 from '../assets/ly4.png';
+import l5 from '../assets/sec.png';
 
 export const JUBILEE_MESSAGES = [
   {
@@ -28,6 +29,16 @@ export const JUBILEE_MESSAGES = [
     color: "from-blue-900 to-cyan-900",
     accent: "text-cyan-400"
   },
+  {
+  "role": "Secretary",
+  "name": "Fr. Jose Chirackal",
+  "title": "Message from Secretary",
+  "image": l5,
+  "message": "Our mission is to provide quality education with strong values, focusing on discipline, innovation, and overall student development.",
+  "date": "Present",
+  "color": "from-green-900 to-emerald-900",
+  "accent": "text-emerald-400"
+},
 {
   role: "Former Principal",
   name: "Fr. Asit Lakra",
@@ -187,7 +198,7 @@ const LegacyPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer CTA */}
+      {/* Footer */}
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -215,7 +226,7 @@ const LegacyPage: React.FC = () => {
               className="text-xl text-slate-400 mb-10 font-light"
             >
               While we celebrate twenty-five years of history, our mission remains the same: 
-              to ignite young minds with the fire of truth and love.
+              to ignite young minds with the fire of truth and love
             </motion.p>
             
             <motion.div 

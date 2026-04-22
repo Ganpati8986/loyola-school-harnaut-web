@@ -33,7 +33,7 @@ const Header = () => {
         { name: "ACADEMIC STAFF", href: "/teachers" },
         { name: "FEE STRUCTURE", href: "/coming-soon" },
         { name: "OUR HISTORY", href: "/school-history" },
-        { name: "ACHIEVEMENTS", href: "/achievements" },
+        // { name: "ACHIEVEMENTS", href: "/achievements" },
         { name: "IMAGES", href: "/gallery?type=images" },
       ],
     },
@@ -46,7 +46,7 @@ const Header = () => {
         { name: "ANNOUNCEMENTS", href: "/bulletin-board" },
         { name: "EXAM CALENDAR", href: "/examination-schedules" },
         { name: "ACADEMIC CALENDAR", href: "/school-calendar" },
-        { name: "ACADEMIC CURRICULUM", href: "/class-syllabus" },
+        // { name: "ACADEMIC CURRICULUM", href: "/class-syllabus" },
         { name: "ACADEMIC RESULTS", href: "/results" },
       ],
     },
@@ -202,86 +202,63 @@ const Header = () => {
         <div className="max-w-[1400px] mx-auto px-4">
           <div className="flex justify-between items-center h-12 lg:h-14">
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center h-full overflow-x-auto">
-              {navLinks.map((link) => (
-                <div
-                  key={link.name}
-                  className="relative h-full group flex-shrink-0"
-                  onMouseEnter={() => setActiveDropdown(link.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <Link
-                    to={link.href}
-                    onClick={(e) => {
-                      if (link.href.startsWith("/#")) {
-                        const id = link.href.split("#")[1];
-                        const element = document.getElementById(id);
-                        if (element) {
-                          e.preventDefault();
-                          element.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }
-                    }}
-                    className={cn(
-                      "px-3 xl:px-4 h-full flex items-center text-[11px] xl:text-[13px] font-bold tracking-wider transition-all duration-300 relative overflow-hidden whitespace-nowrap",
-                      activeDropdown === link.name
-                        ? "bg-[#003366] text-[#FFD700]"
-                        : "hover:bg-[#003366]/80",
-                    )}
-                  >
-                    <span className="relative z-10 flex items-center">
-                      {link.name}
-                      {link.dropdown && (
-                        <ChevronDown
-                          size={13}
-                          className={cn(
-                            "ml-1 transition-transform duration-300",
-                            activeDropdown === link.name && "rotate-180",
-                          )}
-                        />
-                      )}
-                    </span>
-                    <motion.div
-                      className="absolute bottom-0 left-0 h-0.5 bg-[#FFD700] z-20"
-                      initial={{ width: 0 }}
-                      animate={{
-                        width: activeDropdown === link.name ? "100%" : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </Link>
+      {/* Desktop Nav */}
+<div className="hidden lg:flex items-center h-full overflow-visible">
+  {navLinks.map((link) => (
+    <div
+      key={link.name}
+      className="relative h-full group flex-shrink-0"
+    >
+      <Link
+        to={link.href}
+        className="px-3 xl:px-4 h-full flex items-center text-[11px] xl:text-[13px] font-bold tracking-wider transition-all duration-300 relative whitespace-nowrap hover:bg-[#003366]/80"
+      >
+        <span className="flex items-center">
+          {link.name}
+          {link.dropdown && (
+            <ChevronDown
+              size={13}
+              className="ml-1 transition-transform duration-300 group-hover:rotate-180"
+            />
+          )}
+        </span>
+      </Link>
 
-                  {/* Dropdown */}
-                  {link.dropdown && (
-                    <div
-                      className={cn(
-                        "absolute top-full left-0 w-56 bg-[#002147] border-t-2 border-[#CC0000] shadow-2xl transition-all duration-200 origin-top z-[60]",
-                        activeDropdown === link.name
-                          ? "scale-y-100 opacity-100 visible"
-                          : "scale-y-0 opacity-0 invisible",
-                      )}
-                    >
-                      <ul className="py-0">
-                        {link.dropdown.map((item) => (
-                          <li
-                            key={item.name}
-                            className="border-b border-white/10 last:border-0 overflow-hidden"
-                          >
-                            <Link
-                              to={item.href}
-                              className="block px-5 py-3 text-[11px] font-bold hover:bg-white hover:text-[#002147] transition-all uppercase"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+      {/* ✅ DROPDOWN FIXED */}
+      {link.dropdown && (
+        <div
+          className="
+            absolute left-0 top-full w-56
+            bg-[#002147] border-t-2 border-[#CC0000]
+            shadow-2xl z-[9999]
+
+            opacity-0 invisible scale-y-95
+            group-hover:opacity-100 group-hover:visible group-hover:scale-y-100
+
+            transition-all duration-200 ease-out
+            origin-top
+          "
+        >
+          <ul>
+            {link.dropdown.map((item) => (
+              <li
+                key={item.name}
+                className="border-b border-white/10 last:border-0"
+              >
+                <Link
+                  to={item.href}
+                  className="block px-5 py-3 text-[11px] font-bold hover:bg-white hover:text-[#002147] transition-all uppercase"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  ))}
+</div>
 
             {/* Mobile: school name + hamburger */}
             <span className="lg:hidden text-xs sm:text-sm font-bold tracking-widest text-[#FFD700] truncate pr-3">

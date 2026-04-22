@@ -82,8 +82,8 @@ const Admission = () => {
                   'Recent Passport size photographs (2)',
                   'Aadhar Card of Student and Parents',
                   'Previous Class Progress Report',
-                  'Caste Certificate (if applicable)',
-                  'Medical Fitness Certificate',
+                  // 'Caste Certificate (if applicable)',
+                  // 'Medical Fitness Certificate',
                   'Blood Group Report'
                 ].map((doc, i) => (
                   <li key={i} className="flex items-center gap-3 p-4 bg-blue-50/50 rounded-xl text-[#003366] font-medium">
@@ -112,11 +112,11 @@ const Admission = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="text-[#FFD700] shrink-0" size={20} />
-                  <p className="text-gray-600 text-sm">+91 12345 67890</p>
+                  <p className="text-gray-600 text-sm">+91 7634003082</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="text-[#FFD700] shrink-0" size={20} />
-                  <p className="text-gray-600 text-sm">admission@loyolaharnaut.com</p>
+                  <p className="text-gray-600 text-sm">loyolaschoolharnaut@gmail.com</p>
                 </div>
               </div>
             </div>

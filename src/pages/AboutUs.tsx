@@ -48,18 +48,18 @@ const FadeIn = ({ children, delay = 0, direction = 'up', className = '' }: { chi
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const facilities = [
-  { icon: <FlaskConical size={18} />, label: 'Physics Laboratory' },
-  { icon: <FlaskConical size={18} />, label: 'Chemistry Laboratory' },
-  { icon: <FlaskConical size={18} />, label: 'Biology Laboratory' },
+  { icon: <FlaskConical size={18} />, label: 'Science Lab' },
+  // { icon: <FlaskConical size={18} />, label: 'Chemistry Laboratory' },
+  // { icon: <FlaskConical size={18} />, label: 'Biology Laboratory' },
   { icon: <FlaskConical size={18} />, label: 'Maths Laboratory' },
-  { icon: <Cpu size={18} />, label: 'Well Furnished Computer Labs' },
-  { icon: <Library size={18} />, label: 'Well Established Library' },
-  { icon: <Monitor size={18} />, label: 'Audio Visual Room' },
-  { icon: <Monitor size={18} />, label: 'Smart Class Rooms' },
+  { icon: <Cpu size={18} />, label: 'Computer Labs' },
+  { icon: <Library size={18} />, label: 'Library' },
+  // { icon: <Monitor size={18} />, label: 'Audio Visual Room' },
+  // { icon: <Monitor size={18} />, label: 'Smart Class Rooms' },
   { icon: <Eye size={18} />, label: 'CCTV Camera Surveillance' },
   { icon: <Leaf size={18} />, label: 'Beautiful Play Ground' },
-  { icon: <Users size={18} />, label: 'Eco Club, Media Club, Literary Club, Cultural Club' },
-  { icon: <Bike size={18} />, label: 'Cycle Stand for Staff & Students' },
+  // { icon: <Users size={18} />, label: 'Eco Club, Media Club, Literary Club, Cultural Club' },
+  // { icon: <Bike size={18} />, label: 'Cycle Stand for Staff & Students' },
   { icon: <Leaf size={18} />, label: 'Eco Friendly Environments' },
   { icon: <GraduationCap size={18} />, label: 'Well Qualified Faculty' },
 ];
@@ -368,7 +368,7 @@ const AboutUs = () => {
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="mt-6 flex items-center gap-2 text-[#003366] font-bold text-xs"
                 >
-                  Learn More <ArrowRight size={14} />
+                  {/* Learn More <ArrowRight size={14} /> */}
                 </motion.div>
               </motion.div>
             </FadeIn>

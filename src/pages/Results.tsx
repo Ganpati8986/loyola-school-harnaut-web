@@ -5,11 +5,11 @@ import { Trophy, Search, Filter, Download, CheckCircle, Star, Users, Calendar } 
 
 const Results = () => {
   const results = [
-    { title: 'Annual Examination 2025-26', date: 'March 2026', type: 'Annual', color: 'bg-blue-100 text-blue-600' },
-    { title: 'Half Yearly Examination 2025-26', date: 'October 2025', type: 'Term', color: 'bg-green-100 text-green-600' },
-    { title: 'Unit Test III 2025-26', date: 'January 2026', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' },
-    { title: 'Unit Test II 2025-26', date: 'August 2025', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' },
-    { title: 'Unit Test I 2025-26', date: 'May 2025', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' }
+    // { title: 'Annual Examination 2025-26', date: 'March 2026', type: 'Annual', color: 'bg-blue-100 text-blue-600' },
+    // { title: 'Half Yearly Examination 2025-26', date: 'October 2025', type: 'Term', color: 'bg-green-100 text-green-600' },
+    // { title: 'Unit Test III 2025-26', date: 'January 2026', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' },
+    // { title: 'Unit Test II 2025-26', date: 'August 2025', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' },
+    // { title: 'Unit Test I 2025-26', date: 'May 2025', type: 'Unit Test', color: 'bg-orange-100 text-orange-600' }
   ];
 
   return (
@@ -88,10 +88,10 @@ const Results = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: 'Rahul Kumar', class: 'Class X', score: '98.5%', rank: '1st' },
-                  { name: 'Sneha Singh', class: 'Class X', score: '97.2%', rank: '2nd' },
-                  { name: 'Amit Raj', class: 'Class IX', score: '96.8%', rank: '1st' },
-                  { name: 'Priya Kumari', class: 'Class IX', score: '95.5%', rank: '2nd' }
+                  // { name: 'Rahul Kumar', class: 'Class X', score: '98.5%', rank: '1st' },
+                  // { name: 'Sneha Singh', class: 'Class X', score: '97.2%', rank: '2nd' },
+                  // { name: 'Amit Raj', class: 'Class IX', score: '96.8%', rank: '1st' },
+                  // { name: 'Priya Kumari', class: 'Class IX', score: '95.5%', rank: '2nd' }
                 ].map((topper, i) => (
                   <div key={i} className="p-6 rounded-2xl bg-blue-50/50 border border-blue-100 flex items-center gap-4">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#003366] font-bold shadow-sm">

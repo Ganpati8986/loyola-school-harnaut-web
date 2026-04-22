@@ -129,13 +129,13 @@ const OnlineExaminations = () => {
                   <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-[#FFD700]">
                     <Monitor size={16} />
                   </div>
-                  <span>support@loyolaharnaut.com</span>
+                  <span>loyolaschoolharnaut@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-[#FFD700]">
                     <Video size={16} />
                   </div>
-                  <span>+91 12345 67890</span>
+                  <span>+91 7634003082</span>
                 </div>
               </div>
             </div>
