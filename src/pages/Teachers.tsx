@@ -51,7 +51,7 @@ import mam22 from '../assets/divya.jpeg';
 import mam23 from '../assets/sarita.jpeg';
 
 const teachers = [
-  // Female Teachers
+  // Female Teacher
   { id: "2246906", name: "Fr. Anil Kumar Kandru", designation: "PRINCIPAL", email: "", image: sir19, department: "Teacher", experience: 5 },
   { id: "2988789", name: "Sr. DIPA SARDAR", designation: "VICE PRINCIPAL", email: "DIPA30763@GMAIL.COM", image: mam16, department: "Teacher", experience: 5 },
   { id: "3254486", name: "SEEMA KUMARI", designation: "Office Staff", email: "SEEMAK8641@GMAIL.COM", image: mam, department: "Non Teaching", experience: 5 },
@@ -68,9 +68,8 @@ const teachers = [
   { id: "2671013", name: " PRITISHA URAU", designation: "Assistant Teacher", email: "pritishaurau@gmail.com", image: mam11, department: "Teacher", experience: 5 },
   { id: "2449306", name: "RAJANI MAHATO", designation: "Assistant Teacher", email: " rajani1984mahto@gmail.com", image: mam13, department: "Teacher", experience: 5 },
   { id: "73761", name: "MRS. SITARA KUMARI", designation: "Assistant Teacher", email: "sitarakumari84090@gmail.com", image: mam15, department: "Teacher", experience: 5 },
-
-    { id: "", name: " SAVERA KUMARI", designation: "Assistant Teacher", email: "", image: mam20, department: "Teacher", experience: 5 },
-  { id: "", name: "DIVYA JYOTI", designation: "Assistant Teacher", email: "", image: mam22, department: "Teacher", experience: 5 },
+    { id: "", name: " SAVERA KUMARI", designation: "Assistant Teacher", email: "savera", image: mam20, department: "Teacher", experience: 5 },
+  { id: "", name: "DIVYA JYOTI", designation: "Assistant Teacher", email: "divya", image: mam22, department: "Teacher", experience: 5 },
   { id: "", name: "SARITA TIRKEY", designation: "Assistant Teacher", email: "", image: mam23, department: "Teacher", experience: 5 },
     { id: "", name: "SANJU SARITA SOREN", designation: "Assistant Teacher", email: "", image: mam21, department: "Teacher", experience: 5 },
 
@@ -95,7 +94,7 @@ const teachers = [
   { id: "73741", name: "SUNIL KUMAR", designation: "Assistant Teacher", email: "sinilkr1977@gmail.com", image: sir17, department: "Teacher", experience: 5 },
   { id: "73739", name: "Ranjit Pradhan", designation: "Assistant Teacher", email: "ranjitpradhan571979@gmail.com", image: sir20, department: "Teacher", experience: 5 },
   { id: "73741", name: "SUSHIL SAMUEL", designation: "", email: "samuel@gmail.com", image: sir18, department: "Peon", experience: 5 },
-    { id: "", name: "ISSAC MINJ", designation: "Assistant Teacher", email: "", image: sir21, department: "Teacher", experience: 5 },
+  { id: "", name: "ISSAC MINJ", designation: "Assistant Teacher", email: "", image: sir21, department: "Teacher", experience: 5 },
 
   // supporting staff
   { id: "LS-T025", name: "Usha Devi", designation: "", email: "usha@loyolaschoolharnaut.com", image: mam7, department: "Supporting Staff", experience: 5 },
