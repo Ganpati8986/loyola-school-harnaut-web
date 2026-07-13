@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Quote } from 'lucide-react';
 import { cn } from '../lib/utils';
-import principal from '../assets/new_princ (2).jpeg';
+import principal from '../assets/prnc.png';
 import vice from '../assets/sister deepa.jpeg';
 import ProtectedImage from './ProtectedImage';
 

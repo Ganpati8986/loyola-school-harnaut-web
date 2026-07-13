@@ -28,6 +28,7 @@ import ResultsOld from "./pages/ResultsOld";
 import Legacy from "./pages/Legacy";
 import ComingSoon from "./pages/ComingSoon";
 import AboutUs from "./pages/AboutUs";
+import Forms from "./pages/Forms";
 
 /**
  * @license
@@ -77,6 +78,7 @@ export default function App() {
               <Route path="/results-old" element={<ResultsOld />} />
               <Route path="/legacy" element={<Legacy />} />
               <Route path="/coming-soon" element={<ComingSoon />} />
+              <Route path="/forms" element={<Forms />} />
               {/* Fallback to Home for now as other pages are not yet implemented */}
               <Route path="*" element={<Home />} />
             </Routes>

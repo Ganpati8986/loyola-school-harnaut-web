@@ -3,28 +3,43 @@ import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProtectedImage from "./ProtectedImage";
 
-import crousal from "../assets/img1.jpeg";
+// import crousal from "../assets/img1.jpeg";
+import crousal from "../assets/img/img7.png";
 import crousal1 from "../assets/new (1).jpeg";
 import crousal2 from "../assets/img3c.jpeg";
+import crousal3 from "../assets/img/img1.jpg"
+import crousal4 from "../assets/img/img5.jpg"
 
 const slides = [
   {
-    image: crousal,
+    image: crousal3,
     title: "Welcome to Loyola School",
     subtitle: "Nurturing Minds, Building Character",
-    motto: "TRUTH, LOVE AND SERVICE",
+    motto: "Truth • Love • Service",
   },
   {
     image: crousal1,
     title: "Excellence in Education",
-    subtitle: "Empowering the Leaders of Tomorrow",
-    motto: "Diverse Learning",
+    subtitle: "Empowering Every Student to Excel",
+    motto: "Learn Today, Lead Tomorrow",
   },
   {
     image: crousal2,
     title: "Holistic Development",
-    subtitle: "Beyond Academics, Towards Life",
-    motto: "Holistic Education",
+    subtitle: "Building Confidence, Creativity & Compassion",
+    motto: "Growing Minds, Shaping Futures",
+  },
+  {
+    image: crousal,
+    title: "Innovation & Discovery",
+    subtitle: "Inspiring Curiosity Through Modern Learning",
+    motto: "Think Big, Dream Bigger",
+  },
+  {
+    image: crousal4,
+    title: "Together We Achieve",
+    subtitle: "Creating Responsible Citizens for a Better Tomorrow",
+    motto: "Faith • Knowledge • Excellence",
   },
 ];
 

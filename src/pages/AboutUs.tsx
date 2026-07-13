@@ -7,7 +7,7 @@ import {
   ArrowRight, CheckCircle2
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import ourHeritage from '../assets/img11.jpeg'
+import ourHeritage from '../assets/img/img6.jpg'
 
 // ─── Reusable FadeIn ─────────────────────────────────────────────────────────
 const FadeIn = ({ children, delay = 0, direction = 'up', className = '' }: { children: React.ReactNode, delay?: number, direction?: string, className?: string }) => {

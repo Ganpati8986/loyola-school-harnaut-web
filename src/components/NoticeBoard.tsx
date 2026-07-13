@@ -11,72 +11,72 @@ import ptmSummerNotice from "../assets/PTM & summer vacation notice.pdf";
 // Example PDF import — replace with your actual PDF assets
 // import noticePdf from '../assets/notice.pdf';
 const notices = [
-  {
-    id: 1,
-    date: '22-05-2026',
-    title:
-      'Parent-Teacher Meeting (PTM) for Classes II to X scheduled on 23rd May 2026 from 8:00 AM to 10:00 AM',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  },
-  {
-    id: 2,
-    date: '23-05-2026',
-    title:
-      'Students must attend PTM in proper school uniform and bring their school diary along with parents',
-    isNew: true,
-    isImportant: false,
-    isReminder: true,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  },
-  {
-    id: 3,
-    date: '25-05-2026 to 21-06-2026',
-    title:
-      'Summer Vacation will commence from 25th May 2026 and continue till 21st June 2026',
-    isNew: true,
-    isImportant: true,
-    isReminder: false,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  },
-  {
-    id: 4,
-    date: '22-06-2026',
-    title:
-      'School will reopen on 22nd June 2026 with new school timings from 6:00 AM to 12:30 PM',
-    isNew: true,
-    isImportant: true,
-    isReminder: true,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  },
-  {
-    id: 5,
-    date: '22-05-2026',
-    title:
-      'All academic tasks must be completed and submitted on time before summer vacation',
-    isNew: true,
-    isImportant: false,
-    isReminder: true,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  },
-  {
-    id: 6,
-    date: '22-06-2026',
-    title:
-      'Students absent on the first day after reopening will be fined Rs. 500/-',
-    isNew: true,
-    isImportant: true,
-    isReminder: true,
-    fileType: 'pdf',
-    fileUrl: ptmSummerNotice
-  }
+  // {
+  //   id: 1,
+  //   date: '22-05-2026',
+  //   title:
+  //     'Parent-Teacher Meeting (PTM) for Classes II to X scheduled on 23rd May 2026 from 8:00 AM to 10:00 AM',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // },
+  // {
+  //   id: 2,
+  //   date: '23-05-2026',
+  //   title:
+  //     'Students must attend PTM in proper school uniform and bring their school diary along with parents',
+  //   isNew: true,
+  //   isImportant: false,
+  //   isReminder: true,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // },
+  // {
+  //   id: 3,
+  //   date: '25-05-2026 to 21-06-2026',
+  //   title:
+  //     'Summer Vacation will commence from 25th May 2026 and continue till 21st June 2026',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // },
+  // {
+  //   id: 4,
+  //   date: '22-06-2026',
+  //   title:
+  //     'School will reopen on 22nd June 2026 with new school timings from 6:00 AM to 12:30 PM',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: true,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // },
+  // {
+  //   id: 5,
+  //   date: '22-05-2026',
+  //   title:
+  //     'All academic tasks must be completed and submitted on time before summer vacation',
+  //   isNew: true,
+  //   isImportant: false,
+  //   isReminder: true,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // },
+  // {
+  //   id: 6,
+  //   date: '22-06-2026',
+  //   title:
+  //     'Students absent on the first day after reopening will be fined Rs. 500/-',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: true,
+  //   fileType: 'pdf',
+  //   fileUrl: ptmSummerNotice
+  // }
 ];
 
 const NoticeBoard = () => {

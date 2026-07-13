@@ -31,7 +31,7 @@ const Header = () => {
         { name: "ABOUT US", href: "/about-us" },
         { name: "CO-CURRICULAR", href: "/activities" },
         { name: "ACADEMIC STAFF", href: "/teachers" },
-        { name: "FEE STRUCTURE", href: "/coming-soon" },
+        // { name: "FEE STRUCTURE", href: "/coming-soon" },
         { name: "OUR HISTORY", href: "/school-history" },
         // { name: "ACHIEVEMENTS", href: "/achievements" },
         { name: "IMAGES", href: "/gallery?type=images" },
@@ -44,10 +44,10 @@ const Header = () => {
       dropdown: [
         { name: "APPLY FOR ADMISSION", href: "/admission" },
         { name: "ANNOUNCEMENTS", href: "/bulletin-board" },
-        { name: "EXAM CALENDAR", href: "/examination-schedules" },
+        // { name: "EXAM CALENDAR", href: "/examination-schedules" },
         { name: "ACADEMIC CALENDAR", href: "/school-calendar" },
         // { name: "ACADEMIC CURRICULUM", href: "/class-syllabus" },
-        { name: "ACADEMIC RESULTS", href: "/results" },
+        // { name: "ACADEMIC RESULTS", href: "/results" },
       ],
     },
     { name: "NOTICE BOARD", href: "/bulletin-board" },
@@ -63,6 +63,14 @@ const Header = () => {
     { name: "MAGAZINE", href: "/e-magazine" },
     { name: "CAREERS", href: "/careers" },
     { name: "CONTACT US", href: "/contact" },
+    {
+  name: "FORMS",
+  href: "/forms",
+  dropdown: [
+    { name: "REGISTRATION FORM", href: "/forms?type=registration" },
+    { name: "APPLICATION FORM", href: "/forms?type=application" },
+  ],
+},
   ];
 
   return (
