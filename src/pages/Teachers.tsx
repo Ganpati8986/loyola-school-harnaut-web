@@ -44,14 +44,17 @@ import mam19 from '../assets/naina.jpeg';
 import sir21 from '../assets/issac.jpeg';
 import mam20 from '../assets/savera.jpeg';
 import mam21 from '../assets/sanju.jpeg';
-import sir22 from '../assets/samir.jpeg'
+import sir22 from '../assets/samir.jpeg';
+import sir23 from '../assets/ravishankar.jpeg';
+import sir24 from '../assets/augus.jpeg';
 import mam23 from '../assets/sarita.jpeg';
+import mam24 from '../assets/ritu.jpeg';
 
 const teachers = [
   // Female Teacher
   { id: "2246906", name: "Fr. Anil Kumar Kandru", designation: "PRINCIPAL", email: "", image: sir19, department: "Teacher", experience: 5 },
   { id: "2988789", name: "Sr. DIPA SARDAR", designation: "VICE PRINCIPAL", email: "DIPA30763@GMAIL.COM", image: mam16, department: "Teacher", experience: 5 },
-  { id: "", name: "Rita Bandod", designation: "Assistant Teacher", email: "rita@GMAIL.COM", image: "", department: "Teacher", experience: 5 },
+  { id: "", name: "Rita Bandod", designation: "Assistant Teacher", email: "rita@GMAIL.COM", image: mam24, department: "Teacher", experience: 5 },
   { id: "2244167", name: "KRITIKA RAI", designation: "Assistant Teacher", email: "kritikarai223@gmail.com", image: mam1, department: "Teacher", experience: 5 },
   { id: "2246964", name: "SARA KISKU", designation: "Assistant Teacher", email: "saku2507@gmail.com", image: mam2, department: "Teacher", experience: 5 },
     { id: "", name: "Sr. SILBINA BARLA", designation: "Assistant Teacher", email: "", image: mam17, department: "Teacher", experience: 5 },
@@ -84,8 +87,8 @@ const teachers = [
   { id: "2684123", name: "ADITYA KUMAR", designation: "Assistant Teacher", email: "adityakumar241092@gmail.com", image: sir10, department: "Teacher", experience: 5 },
   { id: "2684123", name: "DEEPAK KUMAR", designation: "Assistant Teacher", email: "adityakumar241092@gmail.com", image: sir11, department: "Teacher", experience: 5 },
   { id: "73740", name: "SUDHIR KUMAR SHASTRI", designation: "Assistant Teacher", email: "sudhirshastri64@gmail.com", image: sir12, department: "Teacher", experience: 5 },
-  { id: "", name: "Ravishek Kumar", designation: "Assistant Teacher", email: "ravi@gmail.com", image: "", department: "Teacher", experience: 5 },
-    { id: "", name: "Augustin Tigga", designation: "Assistant Teacher", email: "augustin@gmail.com", image: "", department: "Teacher", experience: 5 },
+  { id: "", name: "Ravishek Kumar", designation: "Assistant Teacher", email: "ravi@gmail.com", image: sir23, department: "Teacher", experience: 5 },
+    { id: "", name: "Augustin Tigga", designation: "Assistant Teacher", email: "augustin@gmail.com", image: sir24, department: "Teacher", experience: 5 },
       { id: "", name: "Samir Tigga", designation: "Office Staff", email: "", image: sir22, department: "Teacher", experience: 5 },
   { id: "2544348", name: "ANUPAM KUMAR", designation: "Assistant Teacher", email: "kumaranupam@gmail.com", image: sir14, department: "Teacher", experience: 5 },
   { id: "2684143", name: "HARSH RANJAN KUMAR", designation: "Assistant Teacher", email: "yadavharsh5695@gmail.com", image: sir15, department: "Teacher", experience: 5 },
