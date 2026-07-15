@@ -7,7 +7,7 @@ import {
   ArrowRight, CheckCircle2
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import ourHeritage from '../assets/img/img6.jpg'
+import ourHeritage from '../assets/sch.png'
 
 // ─── Reusable FadeIn ─────────────────────────────────────────────────────────
 const FadeIn = ({ children, delay = 0, direction = 'up', className = '' }: { children: React.ReactNode, delay?: number, direction?: string, className?: string }) => {
@@ -245,12 +245,20 @@ const AboutUs = () => {
               >
                 <div className="absolute -inset-4 bg-[#FFD700]/10 rounded-[3rem] blur-2xl" />
                 <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-square group">
-                  <img 
+                  {/* <img 
                     src={ourHeritage}
                     alt="School Campus" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
-                  />
+                  /> */}
+
+
+                  <img
+  src={ourHeritage}
+  alt="School Campus"
+  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+  referrerPolicy="no-referrer"
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/60 to-transparent" />
                   <div className="absolute bottom-8 left-8 right-8">
                     <motion.div 

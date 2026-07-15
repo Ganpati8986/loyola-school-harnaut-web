@@ -87,6 +87,7 @@ import g59 from '../assets/img/g59.jpg';
 import g60 from '../assets/img/g60.jpg';
 import g61 from '../assets/img/g61.jpg';
 import g62 from '../assets/img/g62.jpg';
+import g63 from '../assets/sch.png';
 
 
 const categories = ['ALL', 'CAMPUS', 'CLASSROOM', 'LAB', 'GAMES', 'STAFF', 'EVENTS'];
@@ -94,6 +95,7 @@ const categories = ['ALL', 'CAMPUS', 'CLASSROOM', 'LAB', 'GAMES', 'STAFF', 'EVEN
 const galleryItems = [
   // ===================== CAMPUS =====================
   { type: 'image', category: 'CAMPUS', src: g, title: 'Main Building Entrance' },
+     { type: 'image', category: 'CAMPUS', src: g63, title: 'School Building' },
 
   { type: 'image', category: 'CAMPUS', src: g27, title: 'Playground' },
   { type: 'image', category: 'CAMPUS', src: g28, title: 'Playground' },
@@ -105,6 +107,7 @@ const galleryItems = [
   { type: 'image', category: 'CAMPUS', src: g34, title: 'Playground' },
   { type: 'image', category: 'CAMPUS', src: g35, title: 'Playground' },
   { type: 'image', category: 'CAMPUS', src: g36, title: 'Playground' },
+
 
   {
     type: 'video',

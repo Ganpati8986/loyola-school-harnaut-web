@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProtectedImage from "./ProtectedImage";
 
-// import crousal from "../assets/img1.jpeg";
+import crousal5 from "../assets/scccc.png";
 import crousal from "../assets/img/img7.png";
 import crousal1 from "../assets/new (1).jpeg";
 import crousal2 from "../assets/img3c.jpeg";
@@ -12,9 +12,15 @@ import crousal4 from "../assets/img/img5.jpg"
 
 const slides = [
   {
-    image: crousal3,
+    image: crousal5,
     title: "Welcome to Loyola School",
     subtitle: "Nurturing Minds, Building Character",
+    motto: "Truth • Love • Service",
+  },
+   {
+    image: crousal3,
+    title: "A Legacy of Excellence",
+    subtitle: "Where Tradition Meets Modern Learning",
     motto: "Truth • Love • Service",
   },
   {
