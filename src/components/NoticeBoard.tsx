@@ -2,81 +2,44 @@ import React, { useState } from "react";
 import { Bell, Calendar, ChevronRight, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import notice from "../assets/closed.jpg";
-import notice2 from "../assets/notice2.jpg";
-import pdf from "../assets/bookList.pdf";
-import pdf1 from "../assets/new24.pdf";
-import ptmSummerNotice from "../assets/PTM & summer vacation notice.pdf";
+import sofOlympiadNotice from "../assets/sof.jpg";
 
 // Example PDF import — replace with your actual PDF assets
 // import noticePdf from '../assets/notice.pdf';
 const notices = [
-  // {
-  //   id: 1,
-  //   date: '22-05-2026',
-  //   title:
-  //     'Parent-Teacher Meeting (PTM) for Classes II to X scheduled on 23rd May 2026 from 8:00 AM to 10:00 AM',
-  //   isNew: true,
-  //   isImportant: true,
-  //   isReminder: false,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // },
-  // {
-  //   id: 2,
-  //   date: '23-05-2026',
-  //   title:
-  //     'Students must attend PTM in proper school uniform and bring their school diary along with parents',
-  //   isNew: true,
-  //   isImportant: false,
-  //   isReminder: true,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // },
-  // {
-  //   id: 3,
-  //   date: '25-05-2026 to 21-06-2026',
-  //   title:
-  //     'Summer Vacation will commence from 25th May 2026 and continue till 21st June 2026',
-  //   isNew: true,
-  //   isImportant: true,
-  //   isReminder: false,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // },
-  // {
-  //   id: 4,
-  //   date: '22-06-2026',
-  //   title:
-  //     'School will reopen on 22nd June 2026 with new school timings from 6:00 AM to 12:30 PM',
-  //   isNew: true,
-  //   isImportant: true,
-  //   isReminder: true,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // },
-  // {
-  //   id: 5,
-  //   date: '22-05-2026',
-  //   title:
-  //     'All academic tasks must be completed and submitted on time before summer vacation',
-  //   isNew: true,
-  //   isImportant: false,
-  //   isReminder: true,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // },
-  // {
-  //   id: 6,
-  //   date: '22-06-2026',
-  //   title:
-  //     'Students absent on the first day after reopening will be fined Rs. 500/-',
-  //   isNew: true,
-  //   isImportant: true,
-  //   isReminder: true,
-  //   fileType: 'pdf',
-  //   fileUrl: ptmSummerNotice
-  // }
+  {
+    id: 7,
+    date: '15-07-2026',
+    title:
+      'SOF Olympiad Registration is now OPEN for all eligible students. Loyola School (School Code: BR5168). Students must register online using the school access code before the registration closes.',
+    isNew: true,
+    isImportant: true,
+    isReminder: false,
+    fileType: 'image',
+    fileUrl: sofOlympiadNotice
+  },
+  {
+    id: 8,
+    date: 'Registration Deadline',
+    title:
+      '⚠️ VERY IMPORTANT: SOF Olympiad registrations close 30 days before the selected examination date. Students are advised to complete their registration and payment well in advance to avoid missing the deadline.',
+    isNew: true,
+    isImportant: true,
+    isReminder: true,
+    fileType: 'image',
+    fileUrl: sofOlympiadNotice
+  },
+{
+  id: 9,
+  date: 'SOF Registration Assistance',
+  title:
+    'Need help with SOF Olympiad registration? Kindly contact the SOF Registration Team at 8800012977 or email registrations@sofworld.org. For complete information, visit https://sofworld.org or follow SOF on Facebook at http://www.facebook.com/sofworld.',
+  isNew: true,
+  isImportant: true,
+  isReminder: true,
+  fileType: 'image',
+  fileUrl: sofOlympiadNotice
+}
 ];
 
 const NoticeBoard = () => {

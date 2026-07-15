@@ -347,11 +347,7 @@ import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, Calendar, ChevronRight, Star, X } from 'lucide-react';
-import noticeImg from '../assets/closed.jpg';
-import notice2 from '../assets/notice2.jpg';
-import pdf from '../assets/bookList.pdf';
-import pdf1 from '../assets/new24.pdf';
-import pdfRamNavami from '../assets/ram.pdf'
+import sofOlympiadNotice from '../assets/sof.jpg'
 
 const BulletinBoard = () => {
 
@@ -359,99 +355,39 @@ const BulletinBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const notices = [
-  // {
-  //   id: 1,
-  //   date: 'Mar 17 to Mar 20, 2026',
-  //   title: 'Term Break: School closed for Classes I–VIII from 17–20 March',
-  //   isNew: false,
-  //   isImportant: true,
-  //   isReminder: false,
-  //   fileType: 'image',
-  //   fileUrl: noticeImg
-  // },
-  // {
-  //   id: 2,
-  //   date: 'Mar 21, 2026',
-  //   title: 'Parent-Teacher Meeting (PTM) is scheduled on 21st March (Saturday), 8:00 AM – 11:00 AM',
-  //   isNew: false,
-  //   isImportant: true,
-  //   isReminder: false,   // ← has both IMPORTANT + REMINDER
-  //   fileType: 'image',
-  //   fileUrl: noticeImg
-  // },
-  // {
-  //   id: 3,
-  //   date: '2026-03-20',
-  //   title: 'PTM on 21st March, 8:00 AM – 11:00 AM. Students must attend in uniform with parents',
-  //   isNew: false,
-  //   isImportant: false,
-  //   isReminder: true,
-  //   fileType: 'image',                    // ← PDF notice
-  //   fileUrl: notice2      // replace with your actual PDF path / import
-  // },
-  // {
-  //   id: 4,
-  //   date: '2026-03-20',
-  //   title: 'Parents are requested to clear all pending/due fees before attending PTM',
-  //   isNew: true,
-  //   isImportant: true,
-  //   isReminder: false,
-  //   fileType: 'image',                    // ← PDF notice
-  //   fileUrl: notice2  // replace with your actual PDF path / import
-  // },
-  //   {
-  //   "id": 9,
-  //   "date": "26-03-2026",
-  //   "title": "School will remain closed on 27th March 2026 on account of Ram Navami. Regular classes will resume on 28th March.",
-  //   "isNew": true,
-  //   "isImportant": true,
-  //   "isReminder": false,
-  //   "fileType": "pdf",
-  //   "fileUrl": pdfRamNavami
-  // },
-
-  // {
-  //   "id": 7,
-  //   "date": "24-03-2026",
-  //   "title": "Commencement of New Academic Session (Class II to X) from 25th March 2026",
-  //   "isNew": true,
-  //   "isImportant": true,
-  //   "isReminder": false,
-  //   "fileType": "pdf",
-  //   "fileUrl": pdf1
-  // },
-  // {
-  //   "id": 8,
-  //   "date": "24-03-2026",
-  //   "title": "New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM",
-  //   "isNew": true,
-  //   "isImportant": false,
-  //   "isReminder": true,
-  //   "fileType": "pdf",
-  //   "fileUrl": pdf1
-  // },
-  // {
-  //   id: 5,
-  //   "date": "22-03-2026",
-  //   title: 'Books available on 22nd–24th March, 8:00 AM to 2:00 PM in school premises',
-  //   isNew: true,
-  //   isImportant: false,
-  //   isReminder: true,   // ← only REMINDER
-  //   fileType: 'image',
-  //   fileUrl: notice2
-  // },
-  // {
-  //   id: 6,
-  //   "date": "20-03-2026",
-  //   title: 'Book list for upcoming session is shared along with this notice',
-  //   isNew: true,
-  //   isImportant: false,
-  //   isReminder: false,
-  //   fileType: 'pdf',                   
-  //   fileUrl: pdf 
-  // },
-  
-  
+    {
+      id: 7,
+      date: '15-07-2026',
+      title:
+        'SOF Olympiad Registration is now OPEN for all eligible students. Loyola School (School Code: BR5168). Students must register online using the school access code before the registration closes.',
+      isNew: true,
+      isImportant: true,
+      isReminder: false,
+      fileType: 'image',
+      fileUrl: sofOlympiadNotice
+    },
+    {
+      id: 8,
+      date: 'Registration Deadline',
+      title:
+        '⚠️ VERY IMPORTANT: SOF Olympiad registrations close 30 days before the selected examination date. Students are advised to complete their registration and payment well in advance to avoid missing the deadline.',
+      isNew: true,
+      isImportant: true,
+      isReminder: true,
+      fileType: 'image',
+      fileUrl: sofOlympiadNotice
+    },
+  {
+    id: 9,
+    date: 'SOF Registration Assistance',
+    title:
+      'Need help with SOF Olympiad registration? Kindly contact the SOF Registration Team at 8800012977 or email registrations@sofworld.org. For complete information, visit https://sofworld.org or follow SOF on Facebook at http://www.facebook.com/sofworld.',
+    isNew: true,
+    isImportant: true,
+    isReminder: true,
+    fileType: 'image',
+    fileUrl: sofOlympiadNotice
+  }
   ];
 
   return (
@@ -546,17 +482,26 @@ const BulletinBoard = () => {
 
             <div className="bg-[#003366] text-white p-6 rounded-3xl">
               <h3 className="text-xl font-bold mb-4">Emergency Alerts</h3>
-              {/* <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#FFD700] mt-1">•</span>
-                  Commencement of New Academic Session (Class II to X) from 25th March 2026
-                </li>
-{
-                <li className="flex items-start gap-2">
-                  <span className="text-[#FFD700] mt-1">•</span>
-                  New School Timing: 8:00 AM to 2:00 PM | Teachers & Students Arrival 7:30 AM | Assembly 7:45–8:00 AM
-                </li> }
-              </ul> */}
+   <ul className="space-y-3 text-sm">
+  {/* <li className="flex items-start gap-2">
+    <span className="text-[#FFD700] mt-1">•</span>
+    SOF Olympiad Registration is now OPEN for all eligible students of Loyola School.
+  </li>
+
+  <li className="flex items-start gap-2">
+    <span className="text-[#FFD700] mt-1">•</span>
+    Register online using School Code <strong>BR5168</strong> and the provided Access Code before the registration deadline.
+  </li> */}
+
+  <li className="flex items-start gap-2">
+    <span className="text-[#FFD700] mt-1">•</span>
+     SOF Olympiad Registration is now OPEN for Loyola School<strong> (School Code: BR5168). Register using the school access code. Registrations close 30 days before the selected exam date.</strong> </li>
+
+  {/* <li className="flex items-start gap-2">
+    <span className="text-[#FFD700] mt-1">•</span>
+    Need assistance? Call <strong>8800012977</strong> or email <strong>registrations@sofworld.org</strong>.
+  </li> */}
+</ul>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-xl">
