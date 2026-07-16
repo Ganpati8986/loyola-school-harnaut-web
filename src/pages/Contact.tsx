@@ -36,7 +36,7 @@ const Contact = () => {
               <address className="not-italic">
                 <h3 className="text-2xl font-bold text-[#003366] mb-2">Our Location</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  NH-33, RANCHI ROAD, HARNAUT,<br />
+                  NH-31, RANCHI ROAD, HARNAUT,<br />
                   NALANDA, BIHAR - 803110
                 </p>
               </address>

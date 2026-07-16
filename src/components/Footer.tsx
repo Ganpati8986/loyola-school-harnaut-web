@@ -94,7 +94,7 @@ const Footer = () => {
                   aria-hidden="true"
                 />
                 <address className="text-gray-400 text-sm not-italic text-left">
-                  NH-33, Ranchi Road, Harnaut,
+                  NH-31, Ranchi Road, Harnaut,
                   <br />
                   Nalanda, Bihar - 803110
                 </address>
