@@ -348,6 +348,7 @@ import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, Calendar, ChevronRight, Star, X } from 'lucide-react';
 import sofOlympiadNotice from '../assets/sof.jpg'
+import classXPTMNotice from'../assets/Notice for class X PTM.pdf';
 
 const BulletinBoard = () => {
 
@@ -355,6 +356,18 @@ const BulletinBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const notices = [
+
+    {
+      id: 11,
+      date: '25-07-2026',
+      title:
+        '🔔 REMINDER: Parent-Teacher Meeting (PTM) for Class X will be held on 25th July, 2026 from 8:00 a.m. to 10:00 a.m. Parents are requested to attend the meeting with their child in school uniform and carry the school diary.',
+      isNew: true,
+      isImportant: true,
+      isReminder: true,
+      fileType: 'pdf',
+      fileUrl: classXPTMNotice
+    },
     {
       id: 7,
       date: '15-07-2026',
@@ -377,17 +390,17 @@ const BulletinBoard = () => {
       fileType: 'image',
       fileUrl: sofOlympiadNotice
     },
-  {
-    id: 9,
-    date: 'SOF Registration Assistance',
-    title:
-      'Need help with SOF Olympiad registration? Kindly contact the SOF Registration Team at 8800012977 or email registrations@sofworld.org. For complete information, visit https://sofworld.org or follow SOF on Facebook at http://www.facebook.com/sofworld.',
-    isNew: true,
-    isImportant: true,
-    isReminder: true,
-    fileType: 'image',
-    fileUrl: sofOlympiadNotice
-  }
+    {
+      id: 9,
+      date: 'SOF Registration Assistance',
+      title:
+        'Need help with SOF Olympiad registration? Kindly contact the SOF Registration Team at 8800012977 or email registrations@sofworld.org. For complete information, visit https://sofworld.org or follow SOF on Facebook at http://www.facebook.com/sofworld.',
+      isNew: true,
+      isImportant: true,
+      isReminder: true,
+      fileType: 'image',
+      fileUrl: sofOlympiadNotice
+    }
   ];
 
   return (
@@ -482,8 +495,8 @@ const BulletinBoard = () => {
 
             <div className="bg-[#003366] text-white p-6 rounded-3xl">
               <h3 className="text-xl font-bold mb-4">Emergency Alerts</h3>
-   <ul className="space-y-3 text-sm">
-  {/* <li className="flex items-start gap-2">
+              <ul className="space-y-3 text-sm">
+                {/* <li className="flex items-start gap-2">
     <span className="text-[#FFD700] mt-1">•</span>
     SOF Olympiad Registration is now OPEN for all eligible students of Loyola School.
   </li>
@@ -493,15 +506,15 @@ const BulletinBoard = () => {
     Register online using School Code <strong>BR5168</strong> and the provided Access Code before the registration deadline.
   </li> */}
 
-  <li className="flex items-start gap-2">
-    <span className="text-[#FFD700] mt-1">•</span>
-     SOF Olympiad Registration is now OPEN for Loyola School<strong> (School Code: BR5168). Register using the school access code. Registrations close 30 days before the selected exam date.</strong> </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#FFD700] mt-1">•</span>
+                  SOF Olympiad Registration is now OPEN for Loyola School<strong> (School Code: BR5168). Register using the school access code. Registrations close 30 days before the selected exam date.</strong> </li>
 
-  {/* <li className="flex items-start gap-2">
+                {/* <li className="flex items-start gap-2">
     <span className="text-[#FFD700] mt-1">•</span>
     Need assistance? Call <strong>8800012977</strong> or email <strong>registrations@sofworld.org</strong>.
   </li> */}
-</ul>
+              </ul>
             </div>
 
             <div className="bg-white p-6 rounded-3xl shadow-xl">

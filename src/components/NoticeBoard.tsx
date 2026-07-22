@@ -5,8 +5,30 @@ import { useNavigate } from "react-router-dom";
 import sofOlympiadNotice from "../assets/sof.jpg";
 
 // Example PDF import — replace with your actual PDF assets
-// import noticePdf from '../assets/notice.pdf';
+import classXPTMNotice from '../assets/Notice for class X PTM.pdf';
 const notices = [
+  // {
+  //   id: 10,
+  //   date: '22-07-2026',
+  //   title:
+  //     'Parent-Teacher Meeting (PTM) for Class X is scheduled on 25th July, 2026 from 8:00 a.m. to 10:00 a.m. Students must attend in proper school uniform and bring their school diary along with their parents. Attendance of all parents is mandatory.',
+  //   isNew: true,
+  //   isImportant: true,
+  //   isReminder: false,
+  //   fileType: 'image',
+  //   fileUrl: classXPTMNotice
+  // },
+  {
+    id: 11,
+    date: '25-07-2026',
+    title:
+      '🔔 REMINDER: Parent-Teacher Meeting (PTM) for Class X will be held on 25th July, 2026 from 8:00 a.m. to 10:00 a.m. Parents are requested to attend the meeting with their child in school uniform and carry the school diary.',
+    isNew: true,
+    isImportant: true,
+    isReminder: true,
+    fileType: 'pdf',
+    fileUrl: classXPTMNotice
+  },
   {
     id: 7,
     date: '15-07-2026',
