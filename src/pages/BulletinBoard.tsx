@@ -349,6 +349,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, Calendar, ChevronRight, Star, X } from 'lucide-react';
 import sofOlympiadNotice from '../assets/sof.jpg'
 import classXPTMNotice from'../assets/Notice for class X PTM.pdf';
+import soloSingingCompetitionNotice from '../assets/new_notice.pdf';
 
 const BulletinBoard = () => {
 
@@ -356,6 +357,17 @@ const BulletinBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const notices = [
+        {
+  id: 12,
+  date: '23-07-2026',
+  title:
+    '🎤 Inter House Solo Singing Competition for Classes III–IX will be held on 25th July, 2026. Two participants from each house must be nominated. Submit participant names by 24th July, 2026.',
+  isNew: true,
+  isImportant: true,
+  isReminder: true,
+  fileType: 'pdf',
+  fileUrl: soloSingingCompetitionNotice
+},
 
     {
       id: 11,

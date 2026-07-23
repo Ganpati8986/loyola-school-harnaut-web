@@ -6,6 +6,7 @@ import sofOlympiadNotice from "../assets/sof.jpg";
 
 // Example PDF import — replace with your actual PDF assets
 import classXPTMNotice from '../assets/Notice for class X PTM.pdf';
+import soloSingingCompetitionNotice from '../assets/new_notice.pdf';
 const notices = [
   // {
   //   id: 10,
@@ -18,6 +19,17 @@ const notices = [
   //   fileType: 'image',
   //   fileUrl: classXPTMNotice
   // },
+      {
+  id: 12,
+  date: '23-07-2026',
+  title:
+    '🎤 Inter House Solo Singing Competition for Classes III–IX will be held on 25th July, 2026. Two participants from each house must be nominated. Submit participant names by 24th July, 2026.',
+  isNew: true,
+  isImportant: true,
+  isReminder: true,
+  fileType: 'pdf',
+  fileUrl: soloSingingCompetitionNotice
+},
   {
     id: 11,
     date: '25-07-2026',
