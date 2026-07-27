@@ -89,6 +89,18 @@ import g61 from '../assets/img/g61.jpg';
 import g62 from '../assets/img/g62.jpg';
 import g63 from '../assets/sch.png';
 
+import g65 from '../assets/img/gal65.jpeg';
+import g66 from '../assets/img/gal66.jpeg';
+import g67 from '../assets/img/gal67.jpeg';
+import g68 from '../assets/img/gal68.jpeg';
+
+import g69 from '../assets/img/gal69.jpeg';
+import g70 from '../assets/img/gal70.jpeg';
+import g71 from '../assets/img/gal71.jpeg';
+import g72 from '../assets/img/gal65 (1).jpeg';
+
+import g64 from '../assets/imggggg.jpeg';
+
 
 const categories = ['ALL', 'CAMPUS', 'CLASSROOM', 'LAB', 'GAMES', 'STAFF', 'EVENTS'];
 
@@ -107,6 +119,8 @@ const galleryItems = [
   { type: 'image', category: 'CAMPUS', src: g34, title: 'Playground' },
   { type: 'image', category: 'CAMPUS', src: g35, title: 'Playground' },
   { type: 'image', category: 'CAMPUS', src: g36, title: 'Playground' },
+
+  { type: 'image', category: 'CLASSROOM', src: g64, title: 'Classroom' },
 
 
   {
@@ -199,14 +213,14 @@ const galleryItems = [
   // ===================== EVENTS =====================
   { type: 'image', category: 'EVENTS', src: g4, title: 'Cultural Program' },
 
-  // { type: 'image', category: 'EVENTS', src: g10, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g11, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g12, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g13, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g14, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g15, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g16, title: 'Events' },
-  // { type: 'image', category: 'EVENTS', src: g17, title: 'Events' },
+  { type: 'image', category: 'EVENTS', src: g65, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g66, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g67, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g68, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g69, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g70, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g71, title: 'Solo Singing Competition-2026' },
+  { type: 'image', category: 'EVENTS', src: g72, title: 'Solo Singing Competition-2026' },
   // { type: 'image', category: 'EVENTS', src: g18, title: 'Events' },
   // { type: 'image', category: 'EVENTS', src: g19, title: 'Events' },
 
