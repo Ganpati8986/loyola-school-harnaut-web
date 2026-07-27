@@ -287,8 +287,9 @@ import { Bell, Calendar, ChevronRight, X, Download, Loader2 } from "lucide-react
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-// Set these in .env.local for dev, and in your host's env vars for prod
-const ERP_BASE_URL = "http://localhost:8080"; // e.g. http://localhost:8080
+// const ERP_BASE_URL = "http://localhost:8080"; 
+
+const ERP_BASE_URL = "https://sukedu.cloud";
 
 const isWithinDays = (dateStr, days) => {
   const diff = (Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24);
