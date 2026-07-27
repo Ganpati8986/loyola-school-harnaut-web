@@ -316,7 +316,7 @@ const NoticeBoard = () => {
     const fetchNotices = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`${ERP_BASE_URL}/api/public/notices/getPublicNotice`);
+        const res = await fetch(`https://sukedu.cloud/api/public/notices/getPublicNotice`);
         if (!res.ok) throw new Error(`Request failed: ${res.status}`);
         const data = await res.json();
 
