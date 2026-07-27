@@ -144,9 +144,9 @@ const ProtectedImage = ({
 
   useEffect(() => {
 
-    const disableRightClick = (e) => {
-      e.preventDefault();
-    };
+    // const disableRightClick = (e) => {
+    //   e.preventDefault();
+    // };
 
     const disableDrag = (e) => {
       e.preventDefault();
@@ -203,7 +203,7 @@ const ProtectedImage = ({
       }
     }, 800);
 
-    document.addEventListener("contextmenu", disableRightClick);
+    // document.addEventListener("contextmenu", disableRightClick);
     document.addEventListener("dragstart", disableDrag);
     document.addEventListener("copy", disableCopy);
     document.addEventListener("keydown", disableKeys);
@@ -211,7 +211,7 @@ const ProtectedImage = ({
     document.addEventListener("visibilitychange", visibilityChange);
 
     return () => {
-      document.removeEventListener("contextmenu", disableRightClick);
+      // document.removeEventListener("contextmenu", disableRightClick);
       document.removeEventListener("dragstart", disableDrag);
       document.removeEventListener("copy", disableCopy);
       document.removeEventListener("keydown", disableKeys);
