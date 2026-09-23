@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProtectedImage from "./ProtectedImage";
 
 import crousal5 from "../assets/scccc.png";
-import crousal from "../assets/img/img7.png";
+import crousal from "../assets/img/g10.png";
 import crousal1 from "../assets/new (1).jpeg";
 import crousal2 from "../assets/img3c.jpeg";
 import crousal3 from "../assets/img/img1.jpg"
@@ -18,7 +18,7 @@ const slides = [
     motto: "Truth • Love • Service",
   },
    {
-    image: crousal3,
+    image: crousal,
     title: "A Legacy of Excellence",
     subtitle: "Where Tradition Meets Modern Learning",
     motto: "Truth • Love • Service",
@@ -36,7 +36,7 @@ const slides = [
     motto: "Growing Minds, Shaping Futures",
   },
   {
-    image: crousal,
+    image: crousal3,
     title: "Innovation & Discovery",
     subtitle: "Inspiring Curiosity Through Modern Learning",
     motto: "Think Big, Dream Bigger",

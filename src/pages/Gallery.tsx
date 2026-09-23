@@ -102,6 +102,18 @@ import g72 from '../assets/img/gal65 (1).jpeg';
 import g64 from '../assets/imggggg.jpeg';
 
 
+
+import g73 from '../assets/img/gg1.jpeg';
+import g74 from '../assets/img/gg2.jpeg';
+import g75 from '../assets/img/gg3.jpeg';
+import g76 from '../assets/img/gg4.jpeg';
+import g77 from '../assets/img/gg5.jpeg';
+import g78 from '../assets/img/gg6.jpeg';
+import g79 from '../assets/img/gg7.jpeg';
+import g80 from '../assets/img/gg8.jpeg';
+import g81 from '../assets/img/gg9.jpeg';
+
+
 const categories = ['ALL', 'CAMPUS', 'CLASSROOM', 'LAB', 'GAMES', 'STAFF', 'EVENTS'];
 
 const galleryItems = [
@@ -221,6 +233,18 @@ const galleryItems = [
   { type: 'image', category: 'EVENTS', src: g70, title: 'Solo Singing Competition-2026' },
   { type: 'image', category: 'EVENTS', src: g71, title: 'Solo Singing Competition-2026' },
   { type: 'image', category: 'EVENTS', src: g72, title: 'Solo Singing Competition-2026' },
+
+
+
+{ type: 'image', category: 'EVENTS', src: g73, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g74, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g75, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g76, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g77, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g78, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g79, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g80, title: "Teachers' Day 2026" },
+{ type: 'image', category: 'EVENTS', src: g81, title: "Teachers' Day 2026" },
   // { type: 'image', category: 'EVENTS', src: g18, title: 'Events' },
   // { type: 'image', category: 'EVENTS', src: g19, title: 'Events' },
 
