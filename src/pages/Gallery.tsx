@@ -147,7 +147,7 @@ const galleryItems = [
   { type: 'image', category: 'CAMPUS', src: g7, title: 'Playground' },
 
   // ===================== CLASSROOM =====================
-  { type: 'image', category: 'CLASSROOM', src: g1, title: 'Interactive Learning Session' },
+  // { type: 'image', category: 'CLASSROOM', src: g1, title: 'Interactive Learning Session' },
 
   // ===================== LAB =====================
   { type: 'image', category: 'LAB', src: g2, title: 'Physics Laboratory' },
