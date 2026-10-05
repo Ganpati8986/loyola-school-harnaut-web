@@ -153,7 +153,7 @@ const galleryItems = [
   // { type: 'image', category: 'LAB', src: g2, title: 'Physics Laboratory' },
 
   // ===================== GAMES =====================
-  { type: 'image', category: 'GAMES', src: g3, title: 'Annual Sports Day' },
+  // { type: 'image', category: 'GAMES', src: g3, title: 'Annual Sports Day' },
   // { type: 'image', category: 'GAMES', src: g6, title: 'Art & Craft Class' },
 
 
