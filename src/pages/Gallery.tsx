@@ -5,89 +5,90 @@ import SEO from '../components/SEO';
 import { cn } from '../lib/utils';
 import { Play, Image as ImageIcon, X } from 'lucide-react';
 import ProtectedImage from '../components/ProtectedImage';
-import g from '../assets/img/g23.jpg';
-import g1 from '../assets/img6.jpeg';
-import g5 from '../assets/img/g25.jpg';
-import lab from '../assets/lab_v.mp4';
-import g17 from '../assets/img/g17.jpg';
-import s1 from '../assets/img/s1.jpg';
-import s2 from '../assets/img/s2.jpg';
-import s4 from '../assets/img/s4.jpg';
-import s13 from '../assets/img/s13.jpg';
-import s15 from '../assets/img/s15.jpg';
-import s16 from '../assets/img/s16.jpg';
+import { fetchGalleryItems, GALLERY_CATEGORIES } from '../lib/content';
+// import g from '../assets/img/g23.jpg';
+// import g1 from '../assets/img6.jpeg';
+// import g5 from '../assets/img/g25.jpg';
+// import lab from '../assets/lab_v.mp4';
+// import g17 from '../assets/img/g17.jpg';
+// import s1 from '../assets/img/s1.jpg';
+// import s2 from '../assets/img/s2.jpg';
+// import s4 from '../assets/img/s4.jpg';
+// import s13 from '../assets/img/s13.jpg';
+// import s15 from '../assets/img/s15.jpg';
+// import s16 from '../assets/img/s16.jpg';
 
 
 
-import g38 from '../assets/img/g38.jpg';
-import g40 from '../assets/img/g40.jpg';
-import g41 from '../assets/img/g41.jpg';
-import g61 from '../assets/img/g61.jpg';
-import g63 from '../assets/sch.png';
+// import g38 from '../assets/img/g38.jpg';
+// import g40 from '../assets/img/g40.jpg';
+// import g41 from '../assets/img/g41.jpg';
+// import g61 from '../assets/img/g61.jpg';
+// import g63 from '../assets/sch.png';
 
-import g65 from '../assets/img/gal65.jpeg';
-import g66 from '../assets/img/gal66.jpeg';
-import g67 from '../assets/img/gal67.jpeg';
-import g68 from '../assets/img/gal68.jpeg';
-import g69 from '../assets/img/gal69.jpeg';
-import g73 from '../assets/img/gg1.jpeg';
-import g74 from '../assets/img/gg2.jpeg';
-import g75 from '../assets/img/gg3.jpeg';
-import g76 from '../assets/img/gg4.jpeg';
-import g77 from '../assets/img/gg5.jpeg';
-import g80 from '../assets/img/gg8.jpeg';
-import g81 from '../assets/img/gg9.jpeg';
-
-
-const categories = ['ALL', 'CAMPUS', 'CLASSROOM', 'LAB', 'GAMES', 'STAFF', 'EVENTS'];
-
-const galleryItems = [
-  // ===================== CAMPUS =====================
-  { type: 'image', category: 'CAMPUS', src: g, title: 'Main Building Entrance' },
-  { type: 'image', category: 'CAMPUS', src: g63, title: 'School Building' },
-  {
-    type: 'video',
-    category: 'CAMPUS',
-    src: g1,
-    videoUrl: lab,
-    title: 'Class'
-  },
-
-  { type: 'image', category: 'CAMPUS', src: g5, title: 'Playground' },
-
-  // ===================== GAMES =====================
-  { type: 'image', category: 'GAMES', src: g38, title: 'Sports Activities' },
-  // { type: 'image', category: 'GAMES', src: g39, title: 'Sports Activities' },
-  { type: 'image', category: 'GAMES', src: g40, title: 'Sports Activities' },
-  { type: 'image', category: 'GAMES', src: g41, title: 'Sports Activities' },
-  { type: 'image', category: 'GAMES', src: g61, title: 'Sports Activities' },
-  { type: 'image', category: 'GAMES', src: g17, title: 'Sports Activities' },
+// import g65 from '../assets/img/gal65.jpeg';
+// import g66 from '../assets/img/gal66.jpeg';
+// import g67 from '../assets/img/gal67.jpeg';
+// import g68 from '../assets/img/gal68.jpeg';
+// import g69 from '../assets/img/gal69.jpeg';
+// import g73 from '../assets/img/gg1.jpeg';
+// import g74 from '../assets/img/gg2.jpeg';
+// import g75 from '../assets/img/gg3.jpeg';
+// import g76 from '../assets/img/gg4.jpeg';
+// import g77 from '../assets/img/gg5.jpeg';
+// import g80 from '../assets/img/gg8.jpeg';
+// import g81 from '../assets/img/gg9.jpeg';
 
 
-  // ===================== STAFF =====================
+const categories = ['ALL', ...GALLERY_CATEGORIES];
+
+const staticItems: any[] = [
+//   // ===================== CAMPUS =====================
+//   { type: 'image', category: 'CAMPUS', src: g, title: 'Main Building Entrance' },
+//   { type: 'image', category: 'CAMPUS', src: g63, title: 'School Building' },
+//   {
+//     type: 'video',
+//     category: 'CAMPUS',
+//     src: g1,
+//     videoUrl: lab,
+//     title: 'Class'
+//   },
+
+//   { type: 'image', category: 'CAMPUS', src: g5, title: 'Playground' },
+
+//   // ===================== GAMES =====================
+//   { type: 'image', category: 'GAMES', src: g38, title: 'Sports Activities' },
+//   // { type: 'image', category: 'GAMES', src: g39, title: 'Sports Activities' },
+//   { type: 'image', category: 'GAMES', src: g40, title: 'Sports Activities' },
+//   { type: 'image', category: 'GAMES', src: g41, title: 'Sports Activities' },
+//   { type: 'image', category: 'GAMES', src: g61, title: 'Sports Activities' },
+//   { type: 'image', category: 'GAMES', src: g17, title: 'Sports Activities' },
 
 
-  { type: 'image', category: 'STAFF', src: s1, title: 'Principal' },
-  { type: 'image', category: 'STAFF', src: s2, title: 'Vice-Principal' },
-  { type: 'image', category: 'STAFF', src: s4, title: 'Teaching Staff' },
-  { type: 'image', category: 'STAFF', src: s13, title: 'Teaching Staff' },
-  { type: 'image', category: 'STAFF', src: s15, title: 'Teaching Staff' },
-  { type: 'image', category: 'STAFF', src: s16, title: 'Teaching Staff' },
+//   // ===================== STAFF =====================
 
-  // ===================== EVENTS =====================
 
-  { type: 'image', category: 'EVENTS', src: g65, title: 'Solo Singing Competition-2026' },
-  { type: 'image', category: 'EVENTS', src: g66, title: 'Solo Singing Competition-2026' },
-  { type: 'image', category: 'EVENTS', src: g67, title: 'Solo Singing Competition-2026' },
-  { type: 'image', category: 'EVENTS', src: g68, title: 'Solo Singing Competition-2026' },
-  { type: 'image', category: 'EVENTS', src: g69, title: 'Solo Singing Competition-2026' },
-  { type: 'image', category: 'EVENTS', src: g73, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g74, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g75, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g76, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g77, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g80, title: "Teachers' Day 2026" },
-  { type: 'image', category: 'EVENTS', src: g81, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'STAFF', src: s1, title: 'Principal' },
+//   { type: 'image', category: 'STAFF', src: s2, title: 'Vice-Principal' },
+//   { type: 'image', category: 'STAFF', src: s4, title: 'Teaching Staff' },
+//   { type: 'image', category: 'STAFF', src: s13, title: 'Teaching Staff' },
+//   { type: 'image', category: 'STAFF', src: s15, title: 'Teaching Staff' },
+//   { type: 'image', category: 'STAFF', src: s16, title: 'Teaching Staff' },
+
+//   // ===================== EVENTS =====================
+
+//   { type: 'image', category: 'EVENTS', src: g65, title: 'Solo Singing Competition-2026' },
+//   { type: 'image', category: 'EVENTS', src: g66, title: 'Solo Singing Competition-2026' },
+//   { type: 'image', category: 'EVENTS', src: g67, title: 'Solo Singing Competition-2026' },
+//   { type: 'image', category: 'EVENTS', src: g68, title: 'Solo Singing Competition-2026' },
+//   { type: 'image', category: 'EVENTS', src: g69, title: 'Solo Singing Competition-2026' },
+//   { type: 'image', category: 'EVENTS', src: g73, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g74, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g75, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g76, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g77, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g80, title: "Teachers' Day 2026" },
+//   { type: 'image', category: 'EVENTS', src: g81, title: "Teachers' Day 2026" },
 ];
 
 const Gallery = () => {
@@ -95,6 +96,10 @@ const Gallery = () => {
   const typeFilter = searchParams.get('type') || 'all'; // 'images', 'videos', or 'all'
   const [activeCategory, setActiveCategory] = React.useState('ALL');
   const [selectedItem, setSelectedItem] = React.useState<any>(null);
+  // Items added from /admin come first; the original built-in items stay below.
+  const [dbItems, setDbItems] = React.useState<any[]>([]);
+  React.useEffect(() => { fetchGalleryItems().then(setDbItems); }, []);
+  const galleryItems = React.useMemo(() => [...dbItems, ...staticItems], [dbItems]);
 
   const filteredItems = galleryItems.filter(item => {
     const matchesType = typeFilter === 'all' ||
@@ -224,7 +229,15 @@ const Gallery = () => {
 
               <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
                 <div className="aspect-video relative bg-gray-900 overflow-hidden">
-                  {selectedItem.type === 'video' ? (
+                  {selectedItem.youtubeId ? (
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${selectedItem.youtubeId}?autoplay=1&rel=0`}
+                      title={selectedItem.title}
+                      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  ) : selectedItem.type === 'video' ? (
                     <video
                       src={selectedItem.videoUrl}
                       controls

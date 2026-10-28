@@ -1001,6 +1001,7 @@
 
 
 import React, { useState, useEffect, useRef } from "react";
+import { fetchSiteNotices } from "../lib/content";
 import { Bell, Calendar, ChevronRight, X, Download, Loader2, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -1093,13 +1094,19 @@ const NoticeBoard = () => {
           };
         });
 
+        const siteNotices = await fetchSiteNotices();
         if (!cancelled) {
-          setNotices(mapped);
+          setNotices([...siteNotices, ...mapped]);
           setError(null);
         }
       } catch (err) {
         console.error("Failed to load notices:", err);
-        if (!cancelled) setError("Unable to load notices right now.");
+        // ERP down? Still show notices added from /admin.
+        const own = await fetchSiteNotices();
+        if (!cancelled) {
+          if (own.length) { setNotices(own); setError(null); }
+          else setError("Unable to load notices right now.");
+        }
       } finally {
         if (!cancelled) setLoading(false);
       }

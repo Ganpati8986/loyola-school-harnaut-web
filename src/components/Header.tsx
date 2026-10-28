@@ -54,10 +54,10 @@ const Header = () => {
     {
       name: "GALLERY",
       href: "/gallery",
-      dropdown: [
-        { name: "IMAGES", href: "/gallery?type=images" },
-        { name: "VIDEOS", href: "/gallery?type=videos" },
-      ],
+      // dropdown: [
+      //   { name: "IMAGES", href: "/gallery?type=images" },
+      //   { name: "VIDEOS", href: "/gallery?type=videos" },
+      // ],
     },
     { name: "STAFF", href: "/teachers" },
     { name: "MAGAZINE", href: "/e-magazine" },

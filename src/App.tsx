@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
@@ -30,16 +31,23 @@ import ComingSoon from "./pages/ComingSoon";
 import AboutUs from "./pages/AboutUs";
 import Forms from "./pages/Forms";
 
+const AdminApp = lazy(() => import("./admin/AdminApp"));
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export default function App() {
+function Layout() {
+  // /admin is a standalone screen: no school header/footer.
+  if (useLocation().pathname.startsWith("/admin")) {
+    return (
+      <Suspense fallback={null}>
+        <AdminApp />
+      </Suspense>
+    );
+  }
   return (
-    <HelmetProvider>
-      <Router>
-        <ScrollToTop />
         <div className="min-h-screen flex flex-col font-sans selection:bg-[#FFD700] selection:text-[#003366] overflow-x-hidden">
           <Header />
           <main className="flex-grow w-full">
@@ -85,6 +93,15 @@ export default function App() {
           </main>
           <Footer />
         </div>
+  );
+}
+
+export default function App() {
+  return (
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout />
       </Router>
     </HelmetProvider>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProtectedImage from "./ProtectedImage";
+import { fetchBanners } from "../lib/content";
 
 import crousal5 from "../assets/scccc.png";
 import crousal from "../assets/img/g10.png";
@@ -10,39 +11,39 @@ import crousal2 from "../assets/img3c.jpeg";
 import crousal3 from "../assets/img/img1.jpg"
 import crousal4 from "../assets/img/img5.jpg"
 
-const slides = [
+const defaultSlides = [
   {
-    image: crousal5,
+    image: "crousal5",
     title: "Welcome to Loyola School",
     subtitle: "Nurturing Minds, Building Character",
     motto: "Truth • Love • Service",
   },
    {
-    image: crousal,
+    image: "crousal",
     title: "A Legacy of Excellence",
     subtitle: "Where Tradition Meets Modern Learning",
     motto: "Truth • Love • Service",
   },
   {
-    image: crousal1,
+    image: "crousal1",
     title: "Excellence in Education",
     subtitle: "Empowering Every Student to Excel",
     motto: "Learn Today, Lead Tomorrow",
   },
   {
-    image: crousal2,
+    image: "crousal2",
     title: "Holistic Development",
     subtitle: "Building Confidence, Creativity & Compassion",
     motto: "Growing Minds, Shaping Futures",
   },
   {
-    image: crousal3,
+    image: "crousal3",
     title: "Innovation & Discovery",
     subtitle: "Inspiring Curiosity Through Modern Learning",
     motto: "Think Big, Dream Bigger",
   },
   {
-    image: crousal4,
+    image: "crousal4",
     title: "Together We Achieve",
     subtitle: "Creating Responsible Citizens for a Better Tomorrow",
     motto: "Faith • Knowledge • Excellence",
@@ -50,6 +51,23 @@ const slides = [
 ];
 
 const Hero = () => {
+  // Banners managed from /admin; falls back to the built-in slides when none exist.
+  const [slides, setSlides] = useState<any[]>(defaultSlides);
+  useEffect(() => {
+    fetchBanners().then((rows) => {
+      if (!rows.length) return;
+      setCurrent(0);
+      setSlides(
+        rows.map((b) => ({
+          image: b.image_url,
+          title: b.title || "",
+          subtitle: b.subtitle || "",
+          motto: b.motto || "",
+        }))
+      );
+    });
+  }, []);
+
   const [current, setCurrent] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [paused, setPaused] = useState(false);
@@ -71,14 +89,14 @@ const Hero = () => {
     }, 50);
 
     return () => clearInterval(typing);
-  }, [current]);
+  }, [current, slides]);
 
   // Auto Slide
   useEffect(() => {
     if (paused) return;
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, [paused]);
+  }, [paused, slides.length]);
 
   return (
     <section

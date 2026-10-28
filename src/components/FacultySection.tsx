@@ -8,6 +8,7 @@ import fac3 from "../assets/new (4)c.jpeg";
 import fac4 from "../assets/new (2)c.jpeg";
 
 import ProtectedImage from "./ProtectedImage";
+import { fetchSiteImages } from "../lib/content";
 
 const FacultySection: React.FC = () => {
   const states = [
@@ -19,17 +20,24 @@ const FacultySection: React.FC = () => {
     "Kerala",
   ];
 
-  const images = [fac1, fac2, fac3, fac4];
+  const defaultImages = [""];
+  // Carousel photos managed from /admin; built-in ones are used when none exist.
+  const [dbImages, setDbImages] = useState<string[]>([]);
+  useEffect(() => {
+    fetchSiteImages().then((m) => setDbImages(m.faculty || []));
+  }, []);
+  const images = dbImages.length ? dbImages : defaultImages;
 
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
+    setCurrentImage(0);
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 4000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="py-10 bg-white overflow-hidden">

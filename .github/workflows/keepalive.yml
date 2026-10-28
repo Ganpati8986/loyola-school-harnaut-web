@@ -1,0 +1,14 @@
+# Pings Supabase every 3 days so the free project never gets paused for inactivity.
+# Repo -> Settings -> Secrets and variables -> Actions: add SUPABASE_URL and SUPABASE_ANON_KEY
+name: supabase-keepalive
+on:
+  schedule:
+    - cron: "0 4 */3 * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -fsS "${{ secrets.SUPABASE_URL }}/rest/v1/banners?select=id&limit=1" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}"

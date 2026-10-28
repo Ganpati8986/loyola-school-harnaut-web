@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Quote } from 'lucide-react';
 import { cn } from '../lib/utils';
 import principal from '../assets/prnc.png';
 import vice from '../assets/sister deepa.jpeg';
 import ProtectedImage from './ProtectedImage';
+import { fetchSiteImages, fetchSiteText } from '../lib/content';
 
 const PrincipalMessage = () => {
   const [activeTab, setActiveTab] = useState<'principal' | 'vice-principal'>('principal');
+  // Photos replaced from /admin (fall back to the built-in ones)
+  const [photos, setPhotos] = useState<{ principal?: string; vice?: string }>({});
+  const [texts, setTexts] = useState<Record<string, any>>({});
+  useEffect(() => { fetchSiteText().then(setTexts); }, []);
+  useEffect(() => {
+    fetchSiteImages().then((m) => setPhotos({ principal: m.principal?.[0], vice: m.vice_principal?.[0] }));
+  }, []);
 
-  const content = {
+  const defaults = {
     principal: {
       title: "Principal's Message",
       name: " Fr. Anil Kumar Kandru",
       role: "Principal, Loyola School Harnaut",
-      image: principal,
+      image: photos.principal || principal,
       quote: "Welcome to Loyola School, Harnaut. Our mission is to provide an environment where every child can discover their potential and grow into a responsible, compassionate, and capable individual.",
       paragraphs: [
         "The purpose of the institution is to impart to its pupils a sound, moral, intellectual and physical education, to train them to be useful and loyal citizens of India and to help them to become agents of needed social change in the society.",
@@ -25,7 +33,7 @@ const PrincipalMessage = () => {
       title: "Vice Principal's Message",
       name: "Sr. Dipa",
       role: "Vice Principal, Loyola School Harnaut",
-      image: vice,
+      image: photos.vice || vice,
       quote: "At Loyola School, we are committed to fostering an atmosphere of discipline and academic rigor. Our goal is to empower students with the knowledge and values they need to succeed in a rapidly changing world.",
       paragraphs: [
         "We focus on creating a supportive community where every student feels valued and encouraged to excel. Our curriculum is designed to challenge students intellectually while also promoting social and emotional growth.",
@@ -34,6 +42,18 @@ const PrincipalMessage = () => {
     }
   };
 
+  // Name / role / quote / paragraphs edited from /admin override the defaults above.
+  const merge = (d: any, o: any) => ({
+    ...d,
+    name: o?.name || d.name,
+    role: o?.role || d.role,
+    quote: o?.quote || d.quote,
+    paragraphs: o?.paragraphs?.length ? o.paragraphs : d.paragraphs,
+  });
+  const content = {
+    principal: merge(defaults.principal, texts.principal),
+    'vice-principal': merge(defaults['vice-principal'], texts.vice_principal),
+  };
   const current = content[activeTab];
 
   return (
